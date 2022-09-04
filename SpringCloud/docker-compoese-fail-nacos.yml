@@ -1,0 +1,84 @@
+version: "3.9"
+
+services:
+  mysql:
+    image: mysql:5.7.25
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - "/usr/local/etc/mysqlContain/log/:/var/log/"
+      - "/usr/local/etc/mysqlContain/data/:/var/lib/mysql/"
+      - "/usr/local/etc/mysqlContain/conf/hmy.cnf:/etc/mysql/conf.d/hmy.cnf"
+    ports:
+      - "3306:3306"
+  nacos1:
+    image:  nacos/nacos-server:v2.1.0
+    environment:
+      MODE: cluster
+      NACOS_SERVERS: 91.199.209.120:8841 91.199.209.120:8842 91.199.209.120:8843 91.199.209.120:8844 91.199.209.120:8845
+      SPRING_DATASOURCE_PLATFORM: mysql
+      MYSQL_SERVICE_HOST: mysql
+      MYSQL_SERVICE_PORT: 3306
+      MYSQL_SERVICE_USER: root
+      MYSQL_SERVICE_PASSWORD: root
+      MYSQL_SERVICE_DB_NAME: nacos_config
+    ports:
+      - "8841:8848"
+  nacos2:
+    image:  nacos/nacos-server:v2.1.0
+    environment:
+      MODE: cluster
+      NACOS_SERVERS: 91.199.209.120:8841 91.199.209.120:8842 91.199.209.120:8843 91.199.209.120:8844 91.199.209.120:8845
+      SPRING_DATASOURCE_PLATFORM: mysql
+      MYSQL_SERVICE_HOST: mysql
+      MYSQL_SERVICE_PORT: 3306
+      MYSQL_SERVICE_USER: root
+      MYSQL_SERVICE_PASSWORD: root
+      MYSQL_SERVICE_DB_NAME: nacos_config
+    ports:
+      - "8842:8848"
+  nacos3:
+    image:  nacos/nacos-server:v2.1.0
+    environment:
+      MODE: cluster
+      NACOS_SERVERS: 91.199.209.120:8841 91.199.209.120:8842 91.199.209.120:8843 91.199.209.120:8844 91.199.209.120:8845
+      SPRING_DATASOURCE_PLATFORM: mysql
+      MYSQL_SERVICE_HOST: mysql
+      MYSQL_SERVICE_PORT: 3306
+      MYSQL_SERVICE_USER: root
+      MYSQL_SERVICE_PASSWORD: root
+      MYSQL_SERVICE_DB_NAME: nacos_config
+    ports:
+      - "8843:8848"
+  nacos4:
+    image:  nacos/nacos-server:v2.1.0
+    environment:
+      MODE: cluster
+      NACOS_SERVERS: nacos1:8848 nacos2:8848 nacos3:8848 nacos4:8848 nacos5:8848
+      SPRING_DATASOURCE_PLATFORM: mysql
+      MYSQL_SERVICE_HOST: mysql
+      MYSQL_SERVICE_PORT: 3306
+      MYSQL_SERVICE_USER: root
+      MYSQL_SERVICE_PASSWORD: root
+      MYSQL_SERVICE_DB_NAME: nacos_config
+    ports:
+      - "8844:8848"
+  nacos5:
+    image:  nacos/nacos-server:v2.1.0
+    environment:
+      MODE: cluster
+      NACOS_SERVERS: nacos1:8848 nacos2:8848 nacos3:8848 nacos4:8848 nacos5:8848
+      SPRING_DATASOURCE_PLATFORM: mysql
+      MYSQL_SERVICE_HOST: mysql
+      MYSQL_SERVICE_PORT: 3306
+      MYSQL_SERVICE_USER: root
+      MYSQL_SERVICE_PASSWORD: root
+      MYSQL_SERVICE_DB_NAME: nacos_config
+    ports:
+      - "8845:8848"
+  nginx:
+    image: nginx:stable
+    volumes:
+      - "/usr/local/etc/nginxContain/conf/nginx.conf:/etc/nginx/nginx.conf"
+    ports:
+      - "8080:80"

@@ -1,0 +1,89 @@
+version: "3.9"
+networks:
+  app-tier:
+    driver: bridge
+services:
+  redis1:
+    container_name: redis1
+    image: redis:7.0.4-alpine3.16
+    volumes:
+      - /usr/local/etc/redisContain/redis1/conf:/usr/local/etc/redis
+      - /usr/local/etc/redisContain/redis1/data:/data
+    networks:
+      - app-tier
+    command: redis-server /usr/local/etc/redis/redis.conf
+    ports:
+      - "8001:8001"
+      - "18001:18001"
+  redis2:
+    container_name: redis2
+    image: redis:7.0.4-alpine3.16
+    volumes:
+      - /usr/local/etc/redisContain/redis2/conf:/usr/local/etc/redis
+      - /usr/local/etc/redisContain/redis2/data:/data
+    networks:
+      - app-tier
+    command: redis-server /usr/local/etc/redis/redis.conf
+    ports:
+      - "8002:8002"
+      - "18002:18002"
+  redis3:
+    container_name: redis3
+    image: redis:7.0.4-alpine3.16
+    volumes:
+      - /usr/local/etc/redisContain/redis3/conf:/usr/local/etc/redis
+      - /usr/local/etc/redisContain/redis3/data:/data
+    networks:
+      - app-tier
+    command: redis-server /usr/local/etc/redis/redis.conf
+    ports:
+      - "8003:8003"
+      - "18003:18003"
+  redis4:
+    container_name: redis4
+    image: redis:7.0.4-alpine3.16
+    volumes:
+      - /usr/local/etc/redisContain/redis4/conf:/usr/local/etc/redis
+      - /usr/local/etc/redisContain/redis4/data:/data
+    networks:
+      - app-tier
+    command: redis-server /usr/local/etc/redis/redis.conf
+    ports:
+      - "8004:8004"
+      - "18004:18004"
+  redis5:
+    container_name: redis5
+    image: redis:7.0.4-alpine3.16
+    volumes:
+      - /usr/local/etc/redisContain/redis5/conf:/usr/local/etc/redis
+      - /usr/local/etc/redisContain/redis5/data:/data
+    networks:
+      - app-tier
+    command: redis-server /usr/local/etc/redis/redis.conf
+    ports:
+      - "8005:8005"
+      - "18005:18005"
+  redis6:
+    container_name: redis6
+    image: redis:7.0.4-alpine3.16
+    volumes:
+      - /usr/local/etc/redisContain/redis6/conf:/usr/local/etc/redis
+      - /usr/local/etc/redisContain/redis6/data:/data
+    networks:
+      - app-tier
+    command: redis-server /usr/local/etc/redis/redis.conf
+    ports:
+      - "8006:8006"
+      - "18006:18006"
+  redis7:
+    container_name: redis7
+    image: redis:7.0.4-alpine3.16
+    volumes:
+      - /usr/local/etc/redisContain/redis7/conf:/usr/local/etc/redis
+      - /usr/local/etc/redisContain/redis7/data:/data
+    networks:
+      - app-tier
+    command: redis-server /usr/local/etc/redis/redis.conf
+    ports:
+      - "8007:8007"
+      - "18007:18007"

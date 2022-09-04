@@ -1,0 +1,17 @@
+logging:
+  level:
+    io.lettuce.core: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+# 配置redis-sentinel集群信息
+spring:
+  redis:
+    password: m2zT_cCmg~B2TYp-5_
+    cluster:
+      nodes:
+        - 127.0.0.1:8001
+        - 127.0.0.1:8002
+        - 127.0.0.1:8003
+        - 127.0.0.1:8004
+        - 127.0.0.1:8005
+        - 127.0.0.1:8006

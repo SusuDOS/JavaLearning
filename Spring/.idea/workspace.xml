@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ea2f75ac-3258-4d8f-8963-52af83872c3f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Java基础/Java基础.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Java基础/Java基础.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/Code/1. DDL.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/Code/2. DML.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/Code/3. DQL-基础查询.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/Code/4. DQL-条件查询.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/Code/5. DQL-排序查询.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/Code/6. DQL-聚合函数.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/Code/7. DQL-分组查询.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/Code/8. DQL-分页查询.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/Code/student.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/1556823-20181220220242472-524708778.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/1556823-20181220220359609-736422950.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/1556823-20181220220551145-1198958872.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/1556823-20181220222422178-61579658.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/1556823-20181220222924783-57600848.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/1556823-20181220223025128-587235464.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/1556823-20181221093036851-1317238155.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/1556823-20181221093251250-819416425.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20201109134805641.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20201109134948046.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20201109135248104.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20201109135848054.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20201109140001186.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20201109140222488.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20201109140423691.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20201109140955772.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20201109141325810.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20201109142704951.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20201109142737584.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210404200055449.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721184328927.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721184354001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721185303106.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721185923635.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721205130231.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721212754568.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721213349761.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721214029913.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721215223872.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721215328410.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721215517293.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721215556885.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721220032047.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721220132919.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721221107014.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721223450755.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721223745490.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721224056476.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721224435251.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721224720841.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721230202814.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721230332428.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721230824097.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721231052959.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721231142326.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721235108267.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210721235928346.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210722000116080.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210722000345349.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210722000517554.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210722000521997.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210722000740661.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210722000929075.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210722001333817.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210722190508272.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210722194410628.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210722203909502.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210722204233305.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210722215838144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210722220139174.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210722221534870.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210722221756380.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/assets/image-20210722230330366.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/mysql基础.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_01/ppt/mysql基础.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/Code/01-约束-约束案例.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/Code/05-约束-外键约束.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/Code/06-表关系-多对多.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/Code/07-多表查询-数据导入.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/Code/08-多表查询-内连接.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/Code/09-多表查询-外连接.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/Code/10-多表查询-子查询.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/Code/11-多表查询案例-数据准备.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/Code/12-多表查询案例-答案.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/Code/13-事务.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724104749122.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724114548170.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724114805350.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724115024106.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724115149415.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724115336916.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724115547951.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724115826516.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724120904180.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724130925801.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724131210759.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724132538659.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724133015129.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724133443094.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724133556030.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724133610552.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724133704682.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724134145803.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724134318685.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724134735939.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724135054834.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724135346913.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724135649341.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724135809646.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724140307910.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724140456921.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724141445785.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724141550446.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724141822204.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724142550839.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724173630506.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724174212443.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724174717647.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724175344508.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724175518159.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724180103531.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724180542757.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724180613494.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724224955876.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724225537533.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/assets/image-20210724230250263.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/mysql高级.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_02/ppt/mysql高级.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/Code/jdbc-demo/jdbc-demo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/Code/jdbc-demo/lib/druid-1.1.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/Code/jdbc-demo/lib/mysql-connector-java-5.1.48.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/druid/DruidDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/example/BrandTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/jdbc/JDBCDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/jdbc/JDBCDemo2_DriverManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/jdbc/JDBCDemo3_Connection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/jdbc/JDBCDemo4_Statement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/jdbc/JDBCDemo5_ResultSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/jdbc/JDBCDemo6_UserLogin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/jdbc/JDBCDemo7_PreparedStatement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/pojo/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/pojo/Brand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/druid.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/Code/user表.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/JDBC.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/JDBC.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725130537815.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725133015535.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725163745153.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725165156501.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725165220829.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725165349564.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725165536898.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725165657556.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725165751273.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725170004319.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725171339346.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725171355278.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725171635432.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725173444628.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725173618636.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725173648674.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725175037654.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725175057555.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725175131533.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725175151272.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725181320813.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725182352433.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725184701026.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725184817731.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725185024731.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725185320875.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725185603112.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725195756848.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725202829738.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725210432985.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725212911980.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725213210091.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringCloud/cloud-demo-add-nodistribution" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringCloud/cloud-demo-add-nodistribution" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\BOOKS\apache-maven\MAVEN_RESP" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../BOOKS/apache-maven" />
+        <option name="userSettingsFile" value="D:\BOOKS\apache-maven\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Ckk70PR4pQy3RqElZ1F4ZtlWDA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+    <option name="myConnectionType" value="NONE" />
+    <option name="myConnectionId" value="" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ea2f75ac-3258-4d8f-8963-52af83872c3f" name="Default Changelist" comment="" />
+      <created>1659353801105</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659353801105</updated>
+      <workItem from="1659353804254" duration="298000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

@@ -1,0 +1,12 @@
+server:
+  port: 82
+
+#默认info级别，清爽可以使用warn
+logging:
+  level:
+    root: info
+
+likes:
+  - music
+  - game
+  - PE

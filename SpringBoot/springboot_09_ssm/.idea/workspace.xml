@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f275cf83-6329-4d62-97f7-92901f437fb3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../MySQL/MySQL_JDBC/Code/jdbc-demo/jdbc-demo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/.idea/Spring.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/artifacts/springmvc_08_ssm_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/artifacts/springmvc_08_ssm_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__com_alibaba_druid_1_1_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_47.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_mybatis_mybatis_3_5_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_mybatis_mybatis_3_5_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_springframework_spring_aop_5_2_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_springframework_spring_beans_5_2_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_springframework_spring_context_5_2_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_springframework_spring_core_5_2_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_springframework_spring_expression_5_2_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_springframework_spring_test_5_2_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_springframework_spring_tx_5_2_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_springframework_spring_tx_5_3_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_springframework_spring_web_5_2_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/artifacts/springmvc_04_request_param_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/artifacts/springmvc_04_request_param_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/artifacts/springmvc_07_rest_case_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/artifacts/springmvc_07_rest_case_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/artifacts/springmvc_10_exception_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/artifacts/springmvc_10_exception_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/artifacts/springmvc_11_page_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/artifacts/springmvc_11_page_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/artifacts/springmvc_12_interceptor_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/artifacts/springmvc_12_interceptor_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/libraries/Maven__com_alibaba_druid_1_1_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_47.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/libraries/Maven__org_mybatis_mybatis_3_5_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/libraries/Maven__org_springframework_spring_test_5_2_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/libraries/Maven__org_springframework_spring_tx_5_2_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java基础/Java基础.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java基础/Java基础.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/Code/1. DDL.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/Code/2. DML.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/Code/3. DQL-基础查询.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/Code/4. DQL-条件查询.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/Code/5. DQL-排序查询.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/Code/6. DQL-聚合函数.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/Code/7. DQL-分组查询.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/Code/8. DQL-分页查询.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/Code/student.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/1556823-20181220220242472-524708778.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/1556823-20181220220359609-736422950.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/1556823-20181220220551145-1198958872.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/1556823-20181220222422178-61579658.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/1556823-20181220222924783-57600848.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/1556823-20181220223025128-587235464.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/1556823-20181221093036851-1317238155.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/1556823-20181221093251250-819416425.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20201109134805641.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20201109134948046.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20201109135248104.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20201109135848054.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20201109140001186.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20201109140222488.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20201109140423691.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20201109140955772.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20201109141325810.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20201109142704951.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20201109142737584.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210404200055449.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721184328927.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721184354001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721185303106.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721185923635.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721205130231.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721212754568.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721213349761.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721214029913.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721215223872.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721215328410.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721215517293.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721215556885.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721220032047.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721220132919.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721221107014.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721223450755.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721223745490.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721224056476.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721224435251.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721224720841.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721230202814.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721230332428.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721230824097.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721231052959.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721231142326.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721235108267.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210721235928346.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210722000116080.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210722000345349.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210722000517554.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210722000521997.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210722000740661.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210722000929075.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210722001333817.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210722190508272.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210722194410628.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210722203909502.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210722204233305.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210722215838144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210722220139174.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210722221534870.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210722221756380.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/assets/image-20210722230330366.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/mysql基础.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_01/ppt/mysql基础.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/Code/01-约束-约束案例.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/Code/05-约束-外键约束.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/Code/06-表关系-多对多.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/Code/07-多表查询-数据导入.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/Code/08-多表查询-内连接.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/Code/09-多表查询-外连接.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/Code/10-多表查询-子查询.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/Code/11-多表查询案例-数据准备.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/Code/12-多表查询案例-答案.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/Code/13-事务.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724104749122.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724114548170.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724114805350.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724115024106.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724115149415.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724115336916.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724115547951.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724115826516.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724120904180.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724130925801.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724131210759.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724132538659.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724133015129.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724133443094.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724133556030.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724133610552.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724133704682.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724134145803.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724134318685.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724134735939.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724135054834.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724135346913.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724135649341.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724135809646.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724140307910.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724140456921.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724141445785.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724141550446.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724141822204.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724142550839.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724173630506.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724174212443.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724174717647.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724175344508.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724175518159.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724180103531.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724180542757.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724180613494.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724224955876.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724225537533.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/assets/image-20210724230250263.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/mysql高级.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_02/ppt/mysql高级.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/Code/jdbc-demo/jdbc-demo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/Code/jdbc-demo/lib/druid-1.1.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/Code/jdbc-demo/lib/mysql-connector-java-5.1.48.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/druid/DruidDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/example/BrandTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/jdbc/JDBCDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/jdbc/JDBCDemo2_DriverManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/jdbc/JDBCDemo3_Connection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/jdbc/JDBCDemo4_Statement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/jdbc/JDBCDemo5_ResultSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/jdbc/JDBCDemo6_UserLogin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/jdbc/JDBCDemo7_PreparedStatement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/pojo/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/com/itheima/pojo/Brand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/Code/jdbc-demo/src/druid.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/Code/user表.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/JDBC.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/JDBC.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725130537815.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725133015535.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725163745153.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725165156501.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725165220829.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725165349564.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725165536898.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725165657556.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725165751273.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725170004319.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725171339346.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725171355278.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725171635432.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725173444628.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725173618636.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725173648674.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725175037654.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725175057555.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725175131533.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725175151272.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725181320813.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725182352433.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725184701026.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725184817731.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725185024731.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725185320875.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725185603112.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725195756848.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725202829738.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725210432985.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725212911980.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/MySQL_03_JDBC/ppt/assets/image-20210725213210091.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../MySQL/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/spring_17_aop_demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/spring_17_aop_demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/spring_21_case_interface_run_speed/src/test/java/com/itheima/service/AccountServiceTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/spring_21_case_interface_run_speed/src/test/java/com/itheima/service/AccountServiceTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/spring_23_case_handle_password/src/main/java/com/itheima/aop/DataAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/spring_23_case_handle_password/src/main/java/com/itheima/aop/DataAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/spring_24_case_transfer/src/main/java/com/itheima/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/spring_24_case_transfer/src/main/java/com/itheima/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/spring_24_case_transfer/target/classes/com/itheima/config/JdbcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/spring_24_case_transfer/target/classes/com/itheima/config/JdbcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/spring_24_case_transfer/target/classes/com/itheima/config/SpringConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/spring_24_case_transfer/target/classes/com/itheima/config/SpringConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/spring_24_case_transfer/target/classes/com/itheima/service/impl/AccountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/spring_24_case_transfer/target/classes/com/itheima/service/impl/AccountServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/artifacts/springmvc_08_ssm_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/artifacts/springmvc_08_ssm_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/artifacts/springmvc_11_page_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/artifacts/springmvc_11_page_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_alibaba_druid_1_1_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_11_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_12_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_11_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_12_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_11_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_12_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_11_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_12_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_11_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_12_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_11_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_12_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__jakarta_servlet_jakarta_servlet_api_4_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__jakarta_websocket_jakarta_websocket_api_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__mysql_mysql_connector_java_5_1_47.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__mysql_mysql_connector_java_8_0_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__net_minidev_accessors_smart_2_4_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__net_minidev_json_smart_2_4_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_14_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_13_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_14_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_45.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_46.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_46.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_45.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_46.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_assertj_assertj_core_3_18_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_assertj_assertj_core_3_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_jetty_annotations_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_jetty_client_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_jetty_continuation_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_jetty_plus_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_jetty_security_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_jetty_server_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_jetty_servlet_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_jetty_servlets_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_jetty_util_ajax_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_jetty_webapp_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_jetty_xml_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_websocket_javax_websocket_client_impl_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_websocket_javax_websocket_server_impl_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_api_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_client_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_common_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_server_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_servlet_9_4_41_v20210516.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_glassfish_jakarta_el_3_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_mockito_mockito_core_3_6_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_mockito_mockito_core_3_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_6_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_mybatis_mybatis_3_5_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_mybatis_mybatis_3_5_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_objenesis_objenesis_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_ow2_asm_asm_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_ow2_asm_asm_analysis_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_ow2_asm_asm_commons_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_ow2_asm_asm_tree_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_2_4_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_4_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_4_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jetty_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_4_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_4_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_4_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_4_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_4_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_4_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_4_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_aop_5_2_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_aop_5_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_aop_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_beans_5_2_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_beans_5_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_beans_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_context_5_2_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_context_5_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_context_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_core_5_2_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_core_5_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_core_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_expression_5_2_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_expression_5_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_expression_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_jcl_5_2_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_jcl_5_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_jcl_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_test_5_2_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_test_5_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_test_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_tx_5_2_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_tx_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_web_5_2_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_web_5_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_web_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_yaml_snakeyaml_1_27.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Maven__org_yaml_snakeyaml_1_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_02_base_config/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_02_base_config/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_02_base_config/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_02_base_config/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_02_base_config/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_02_base_config/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_02_base_config/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_02_base_config/springboot_02_base_config.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_02_base_config/springboot_02_base_config.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_02_base_config/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_02_base_config/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_02_base_config/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_02_base_config/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_03_read_data/src/main/java/com/itheima/Springboot03ReadDataApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_03_read_data/src/main/java/com/itheima/Springboot03ReadDataApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_05_maven_and_boot_profile/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_05_maven_and_boot_profile/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_05_maven_and_boot_profile/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_05_maven_and_boot_profile/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_07_test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_07_test/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_07_test/springboot_07_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_07_test/springboot_07_test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_08_mybatis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_08_mybatis/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_08_mybatis/springboot_08_mybatis.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_08_mybatis/src/main/java/com/itheima/Springboot08MybatisApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_08_mybatis/src/main/java/com/itheima/Springboot08MybatisApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_08_mybatis/src/main/java/com/itheima/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_08_mybatis/src/main/java/com/itheima/domain/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_08_mybatis/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_08_mybatis/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_08_mybatis/src/test/java/com/itheima/Springboot08MybatisApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_08_mybatis/src/test/java/com/itheima/Springboot08MybatisApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_09_ssm.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/controller/ProjectExceptionAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/controller/ProjectExceptionAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringCloud/cloud-demo-add-nodistribution" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringCloud/cloud-demo-add-nodistribution" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_01_quickstart/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_04_request_param/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_04_request_param/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_04_request_param/src/main/java/com/itheima/config/SpringMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_04_request_param/src/main/java/com/itheima/config/SpringMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_04_request_param/src/main/java/com/itheima/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_04_request_param/src/main/java/com/itheima/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_04_request_param/target/classes/com/itheima/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_04_request_param/target/classes/com/itheima/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_04_request_param/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_04_request_param/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_07_rest_case/src/main/java/com/itheima/config/SpringMvcSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_07_rest_case/src/main/java/com/itheima/config/SpringMvcSupport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_07_rest_case/target/classes/com/itheima/config/SpringMvcSupport.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_07_rest_case/target/classes/com/itheima/config/SpringMvcSupport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_08_ssm/src/main/java/com/itheima/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_08_ssm/src/main/java/com/itheima/dao/BookDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_08_ssm/src/main/java/com/itheima/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_08_ssm/src/main/java/com/itheima/domain/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_08_ssm/target/classes/com/itheima/config/JdbcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_08_ssm/target/classes/com/itheima/config/JdbcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_08_ssm/target/classes/com/itheima/config/SpringConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_08_ssm/target/classes/com/itheima/config/SpringConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_08_ssm/target/classes/com/itheima/domain/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_08_ssm/target/classes/com/itheima/domain/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_08_ssm/target/classes/com/itheima/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_08_ssm/target/classes/com/itheima/service/BookService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_10_exception/src/main/java/com/itheima/controller/ProjectExceptionAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_10_exception/src/main/java/com/itheima/controller/ProjectExceptionAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_10_exception/src/main/java/com/itheima/exception/SystemException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_10_exception/src/main/java/com/itheima/exception/SystemException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_10_exception/target/classes/com/itheima/controller/ProjectExceptionAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_10_exception/target/classes/com/itheima/controller/ProjectExceptionAdvice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_10_exception/target/classes/com/itheima/exception/BusinessException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_10_exception/target/classes/com/itheima/exception/BusinessException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_10_exception/target/classes/com/itheima/exception/SystemException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_10_exception/target/classes/com/itheima/exception/SystemException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_10_exception/target/classes/com/itheima/service/impl/BookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_10_exception/target/classes/com/itheima/service/impl/BookServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_11_page/src/main/webapp/pages/books.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_11_page/src/main/webapp/pages/books.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringMVC/springmvc_12_interceptor/src/main/java/com/itheima/config/SpringMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringMVC/springmvc_12_interceptor/src/main/java/com/itheima/config/SpringMvcConfig.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\BOOKS\apache-maven\MAVEN_RESP" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../BOOKS/apache-maven" />
+        <option name="userSettingsFile" value="D:\BOOKS\apache-maven\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2CtuLvNz59MINcuIjpRZOB4G1gM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Springboot09SsmApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot_09_ssm" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.Springboot09SsmApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f275cf83-6329-4d62-97f7-92901f437fb3" name="Default Changelist" comment="" />
+      <created>1659634152251</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659634152251</updated>
+      <workItem from="1659634153730" duration="628000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

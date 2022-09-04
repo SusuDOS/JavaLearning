@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch ItemApplication1",
+            "request": "launch",
+            "mainClass": "com.heima.item.ItemApplication",
+            "projectName": "item-service",
+            "vmArgs": "-Dserver.port=8091"
+        },
+        {
+            "type": "java",
+            "name": "Launch ItemApplication2",
+            "request": "launch",
+            "mainClass": "com.heima.item.ItemApplication",
+            "projectName": "item-service",
+            "vmArgs": "-Dserver.port=8092"
+        }
+    ]
+}

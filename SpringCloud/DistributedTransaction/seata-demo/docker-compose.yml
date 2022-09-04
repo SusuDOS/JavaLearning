@@ -1,0 +1,46 @@
+version: "3.9"
+services:
+  nacos:
+    container_name: nacos
+    image: nacos/nacos-server:v2.1.0
+    environment:
+      MODE: standalone
+    ports:
+      - "8848:8848"
+    volumes:
+      - "/usr/local/etc/standalonenacos/application.properties:/home/nacos/application.properties"
+  mysql:
+    container_name: mysql
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - "/usr/local/etc/mysqlContain/log/:/var/log/"
+      - "/usr/local/etc/mysqlContain/data/:/var/lib/mysql/"
+      - "/usr/local/etc/mysqlContain/conf/hmy.cnf:/etc/mysql/conf.d/hmy.cnf"
+    ports:
+      - "3306:3306"
+  seata1:
+    container_name: seata-sh
+    image: seataio/seata-server:1.4.2
+    hostname: seata
+    ports:
+      - 8091:8091
+    environment:
+      - SEATA_PORT=8091
+    volumes:
+      - "/usr/local/etc/seataContain1/registry.conf:/seata-server/resources/registry.conf"
+    expose:
+      - 8091
+  seata2:
+    container_name: seata-hz
+    image: seataio/seata-server:1.4.2
+    hostname: seata
+    ports:
+      - 8092:8091
+    environment:
+      - SEATA_PORT=8091
+    volumes:
+      - "/usr/local/etc/seataContain2/registry.conf:/seata-server/resources/registry.conf"
+    expose:
+      - 8091

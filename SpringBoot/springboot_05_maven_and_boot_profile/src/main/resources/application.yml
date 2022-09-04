@@ -1,0 +1,51 @@
+#设置启用的环境-maven设置的是pro环境.
+spring:
+  profiles:
+    active: ${profile.active}
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+server:
+  port: 80
+
+---
+spring:
+  config:
+    activate:
+      on-profile: pro
+server:
+  port: 81
+
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+server:
+  port: 82
+
+#上面为新的标准格式，下面的为弃用格式，但是仍然可用
+
+#---
+##开发
+#spring:
+#  profiles:
+#    active:
+#
+#---
+##生产
+#spring:
+#  profiles: pro
+#server:
+#  port: 81
+#---
+##测试
+#spring:
+#  profiles: test
+#server:
+#  port: 82
+#---

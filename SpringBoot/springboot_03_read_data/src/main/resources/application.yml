@@ -1,0 +1,39 @@
+lesson: SpringBoot
+
+#yaml与yml貌似是一种格式文件的不同扩展名，扩展名为yaml不影响该程序的运行.
+
+enterprise:
+  name: itcast
+  age: 16
+  tel: 4006184000
+  subject:
+    - Java
+    - 前端
+    - 大数据
+spring:
+  profiles:
+    active: test
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+server:
+  port: 8080
+
+---
+spring:
+  config:
+    activate:
+      on-profile: pro
+server:
+  port: 8081
+
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+server:
+  port: 8082

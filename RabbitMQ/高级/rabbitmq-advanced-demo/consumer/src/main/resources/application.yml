@@ -1,0 +1,23 @@
+logging:
+  pattern:
+    dateformat: HH:mm:ss:SSS
+  level:
+    cn.itcast: debug
+spring:
+  rabbitmq:
+    host: high.gaoshuye.top # rabbitMQ的ip地址
+    port: 5672 # 端口
+    #    addresses: 192.168.150.101:8071, 192.168.150.101:8072, 192.168.150.101:8073
+    username: itcast
+    password: 123321
+    virtual-host: /
+    listener:
+      simple:
+        prefetch: 1
+        acknowledge-mode: auto # none，消息被拿则清空；auto，失败则无限重试；manual，手动处理.
+        retry:
+          enabled: true # 开启失败重试
+          initial-interval: 1000 # 1000ms
+          multiplier: 3 # 倍数，下次等待=1000*3*...
+          max-attempts: 4 # 尝试次数
+          stateless: true # true无状态，false有状态，若业务中有事物，需要改为false;缺省为true.

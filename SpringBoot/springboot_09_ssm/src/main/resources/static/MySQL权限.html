@@ -1,0 +1,1082 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <meta name="description" content="一、创建用户 授予用户li数据库person的所有权限，并允许用户li将数据库person的所有权限授予其它用户 立即生效，如果授予的权限没有生效执行以下命令，在5.6版本更改即会生效。 GRANT创" />
+    <meta property="og:description" content="一、创建用户 授予用户li数据库person的所有权限，并允许用户li将数据库person的所有权限授予其它用户 立即生效，如果授予的权限没有生效执行以下命令，在5.6版本更改即会生效。 GRANT创" />
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>MySQL 权限 - pursuer.chen - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=bBJU-ljNTYNulByaSuL-TW16KvkX72sI9IxfrvAzlis" />
+    <link id="MainCss" rel="stylesheet" href="/skins/minyx2_lite/bundle-minyx2_lite.min.css?v=dAZqfPyj_K3HGLqJknnXtGH2Xduy__951OwO7YiGc-o" />
+    <link id="highlighter-theme-cnblogs" type="text/css" rel="stylesheet" href="/css/hljs/cnblogs.css?v=5J1NDtbnnIr2Rc2SdhEMlMxD4l9Eydj88B31E7_NhS4" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/chenmh/custom.css?v=XTwWx/k7tBI6SawDHJILghB6UbY=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/minyx2_lite/bundle-minyx2_lite-mobile.min.css?v=ULZH15V27JQRcKFJj8drF9ipZpkr6NQjmjXK1UtZitA" />
+
+
+
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/chenmh/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/chenmh/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/chenmh/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 71142;
+        var currentBlogApp = 'chenmh';
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'Minyx2_Lite';
+        var visitorUserId = '';
+        var hasCustomScript = true;
+        try {
+            if (hasCustomScript && document.referrer && document.referrer.indexOf('baidu.com') >= 0) {
+                Object.defineProperty(document, 'referrer', { value: '' });
+                Object.defineProperty(Document.prototype, 'referrer', { get: function(){ return ''; } });
+            }
+        } catch(error) { }
+        window.cb_enable_mathjax = false;
+        window.mathEngine = 0;
+        window.codeHighlightEngine = 1;
+        window.enableCodeLineNumber = false;
+        window.codeHighlightTheme = 'cnblogs';
+        window.isDarkCodeHighlightTheme = false;
+        window.isDisableCodeHighlighter = false;
+    </script>
+    <script>
+        var currentPostDateAdded = '2015-05-28 08:53';
+    </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=9qwm1OqCQMFJprAATKUxamZ91RFJw4VTGEV5NPU6sDU"></script>
+    <script src="/skins/minyx2_lite/bundle-minyx2_lite.min.js?v=z_XLIOc5JYwRKqTPu9fAWp7D8tchhGxVWGYvlAiigUQ" type="text/javascript" language="javascript"></script>
+</head>
+<body class="skin-minyx2_lite no-navbar">
+<a name="top"></a>
+<div id="top_nav" class="navbar forpc navbar-custom">
+    <nav id="nav_main" class="navbar-main">
+        <ul id="nav_left" class="navbar-list navbar-left">
+            <li class="navbar-branding">
+                <a href="https://www.cnblogs.com/" title="开发者的网上家园" role="banner">
+                    <img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" />
+                </a>
+            </li>
+            <li>
+                <a href="/" onclick="countClicks('skin-navbar-sitehome')">首页</a>
+            </li>
+            <li>
+                <a href="https://news.cnblogs.com/" onclick="countClicks('nav', 'skin-navbar-news')">新闻</a>
+            </li>
+            <li>
+                <a href="https://q.cnblogs.com/" onclick="countClicks('nav', 'skin-navbar-q')">博问</a>
+            </li>
+            <li>
+                <a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="countClicks('nav', 'skin-navbar-brands')">专区</a>
+            </li>
+            <li>
+                <a href="https://ing.cnblogs.com/" onclick="countClicks('nav', 'skin-navbar-ing')">闪存</a>
+            </li>
+            <li>
+                <a href="https://edu.cnblogs.com/" onclick="countClicks('nav', 'skin-navbar-edu')">班级</a>
+            </li>
+        </ul>
+        <ul id="nav_right" class="navbar-list navbar-right">
+            <li>
+                <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get" role="search">
+                    <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="search" tabindex="3"/>
+                    <button type="submit" id="zzk_search_button">
+                        <img src="/images/aggsite/search.svg" alt="搜索" />
+                    </button>
+                </form>
+            </li>
+            <li id="navbar_login_status" class="navbar-list">
+                <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                    <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                </a>
+                <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                    <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                </a>
+                <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                    <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                    <span id="msg_count" style="display: none"></span>
+                </a>
+                <a id="navbar_lite_mode_indicator" data-current-page="blog" style="display: none" href="javascript:void(0)" alt="简洁模式" title="简洁模式启用，您在访问他人博客时会使用简洁款皮肤展示">
+                    <img class="navbar-icon" src="/images/aggsite/lite-mode-on.svg" alt="简洁模式" />
+                </a>
+                <div id="user_info" class="navbar-user-info dropdown">
+                    <a class="dropdown-button" href="https://home.cnblogs.com/">
+                        <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                    </a>
+                    <div class="dropdown-menu">
+                        <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                        <a href="https://home.cnblogs.com/">我的园子</a>
+                        <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                        <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+                            简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+                        </a>
+                        <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                    </div>
+                </div>
+                <a class="navbar-anonymous" href="https://account.cnblogs.com/signup">注册</a>
+                <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+
+<div id="container">
+    <a class="minyx" href="https://www.cnblogs.com/">代码改变世界</a>
+    <ul id="topMnu">
+        <!-- 统计数据 -->
+        <li>
+            <div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+        </li>
+        <!-- 这边可以增加一些链接 -->
+        <!-- 博客园 -->
+        <li><a href="https://www.cnblogs.com/">Cnblogs</a></li>
+        <!-- 管理 -->
+        <li id="topMnu-dashboard">
+            <a id="lnkDashboard" href="https://i.cnblogs.com/">Dashboard</a>
+        </li>
+        <li>
+
+            <a id="lnkLogin" href="https://account.cnblogs.com/signin?returnUrl=https://www.cnblogs.com/chenmh/">Login</a>
+
+
+        </li>
+    </ul>
+
+    <script type="text/javascript">
+        var m = window.__blog.topMenuRendered;
+        if (m) { m(__$("topMnu")); }
+    </script>
+
+    <div id="header">
+        <ul id="menu">
+            <!-- 首页，当前section加上current类 -->
+            <li id="menu-home" class="current">
+                <a id="lnkHome" href="https://www.cnblogs.com/chenmh/">Home</a></li>
+            <!-- 联系 -->
+            <li id="menu-contact">
+                <a id="lnkContact" href="https://msg.cnblogs.com/send/pursuer.chen">Contact</a></li>
+            <!-- 相册 -->
+            <li id="menu-gallary">
+                <a id="lnkGallery" href="https://www.cnblogs.com/chenmh/gallery.html">Gallery</a></li>
+            <!-- 订阅 -->
+            <li id="menu-subscribe">
+                <a id="blog_nav_rss" href="javascript:void(0);" data-rss="https://www.cnblogs.com/chenmh/rss/">Subscribe</a></li>
+            <!-- Rss订阅 -->
+            <li id="rss">
+                <a id="lnkRss" href="https://www.cnblogs.com/chenmh/rss/">RSS</a></li>
+        </ul>
+        <div id="newmsg"></div>
+        <h1>
+            <!-- 主标题 -->
+            <a id="lnkBlogTitle" href="https://www.cnblogs.com/chenmh/">pursuer.chen</a>
+            <!-- 子标题 -->
+            <small>
+                LIVE AND LEARN
+            </small>
+        </h1>
+    </div>
+
+    <script type="text/javascript">
+        var m = window.__blog.headerRendered;
+        if (m) { m(__$("header")); }
+    </script>
+
+    <div id="wrapper">
+        <div id="content">
+            <script type="text/javascript">
+                var m = window.__blog.preRenderPosts;
+                if (m) { m(); }
+            </script>
+            <div id="post_detail">
+                <div class="post" id="post">
+                    <a name="top"></a>
+                    <h2>
+                        <a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/chenmh/p/4533902.html">
+                            <span role="heading" aria-level="2">MySQL 权限</span>
+
+                        </a>
+                    </h2>
+                    <small>
+                        <span id="post-date">2015-05-28 08:53</span>&nbsp;
+                        <a href="https://www.cnblogs.com/chenmh/">pursuer.chen</a>&nbsp;
+                        阅读(<span id="post_view_count">3973</span>)&nbsp;
+                        评论(<span id="post_comment_count">0</span>)&nbsp;
+                        <a href="https://i.cnblogs.com/EditPosts.aspx?postid=4533902" rel="nofollow">编辑</a>&nbsp;
+                        <a href="javascript:void(0)" onclick="AddToWz(4533902);return false;">收藏</a>&nbsp;
+                        <a href="javascript:void(0)" onclick="reportManager.report({ currentUserId: '', targetType: 'blogPost', targetId: '4533902', targetLink: 'https://www.cnblogs.com/chenmh/p/4533902.html', title: 'MySQL 权限' })">举报</a></small>
+                    <div class="entry">
+                        <div id="cnblogs_post_body" class="blogpost-body blogpost-body-html">
+                            <h2><strong>一、创建用户</strong></h2>
+                            <div class="cnblogs_code">
+                                <pre><span style="color: rgba(0, 0, 255, 1)">CREATE</span> <span style="color: rgba(255, 0, 255, 1)">USER</span>  li<span style="color: rgba(0, 128, 0, 1)">@localhost</span> IDENTIFIED <span style="color: rgba(0, 0, 255, 1)">BY</span> <span style="color: rgba(255, 0, 0, 1)">'</span><span style="color: rgba(255, 0, 0, 1)">li</span><span style="color: rgba(255, 0, 0, 1)">'</span>;</pre>
+                            </div>
+                            <p>授予用户li数据库person的所有权限，并允许用户li将数据库person的所有权限授予其它用户</p>
+                            <div class="cnblogs_code">
+                                <pre><span style="color: rgba(0, 0, 255, 1)">GRANT</span> <span style="color: rgba(128, 128, 128, 1)">ALL</span> <span style="color: rgba(0, 0, 255, 1)">ON</span> PERSON.<span style="color: rgba(128, 128, 128, 1)">*</span> <span style="color: rgba(0, 0, 255, 1)">TO</span> li<span style="color: rgba(0, 128, 0, 1)">@localhost</span> <span style="color: rgba(0, 0, 255, 1)">WITH</span> <span style="color: rgba(0, 0, 255, 1)">GRANT</span> <span style="color: rgba(0, 0, 255, 1)">OPTION</span>;</pre>
+                            </div>
+                            <p>立即生效，如果授予的权限没有生效执行以下命令，在5.6版本更改即会生效。</p>
+                            <div class="cnblogs_code">
+                                <pre>FLUSH <span style="color: rgba(0, 0, 255, 1)">PRIVILEGES</span>;</pre>
+                            </div>
+                            <p><strong>GRANT创建用户</strong></p>
+                            <p>如果当前不存在用户，GRANT可以在授予权限的时候创建用户</p>
+                            <p>授予用户数据库person所有表的select,insert权限。</p>
+                            <div class="cnblogs_code">
+                                <pre><span style="color: rgba(0, 0, 255, 1)">GRANT</span> <span style="color: rgba(0, 0, 255, 1)">SELECT</span>,<span style="color: rgba(0, 0, 255, 1)">INSERT</span> <span style="color: rgba(0, 0, 255, 1)">ON</span> PERSON.<span style="color: rgba(128, 128, 128, 1)">*</span> <span style="color: rgba(0, 0, 255, 1)">TO</span> <span style="color: rgba(255, 0, 0, 1)">'</span><span style="color: rgba(255, 0, 0, 1)">abc</span><span style="color: rgba(255, 0, 0, 1)">'</span>@<span style="color: rgba(255, 0, 0, 1)">'</span><span style="color: rgba(255, 0, 0, 1)">localhost</span><span style="color: rgba(255, 0, 0, 1)">'</span> identified <span style="color: rgba(0, 0, 255, 1)">by</span> <span style="color: rgba(255, 0, 0, 1)">'</span><span style="color: rgba(255, 0, 0, 1)">abc</span><span style="color: rgba(255, 0, 0, 1)">'</span>;<br><br>同时运行用户abc将person数据库的SELECT,INSERT权限授予给其它用户</pre>
+                                <pre>GRANT SELECT,INSERT ON PERSON.* TO 'abc'@'localhost' identified by 'abc' with grant option;</pre>
+                            </div>
+                            <div class="cnblogs_code">
+<pre>创建用户root密码123456并赋予服务器所有权限,允许IP192.<span style="color: rgba(128, 0, 0, 1); font-weight: bold">168.1</span><span style="color: rgba(0, 0, 0, 1)">.5的客户端连接。
+</span><span style="color: rgba(0, 0, 255, 1)">grant</span> <span style="color: rgba(128, 128, 128, 1)">all</span> <span style="color: rgba(0, 0, 255, 1)">privileges</span> <span style="color: rgba(0, 0, 255, 1)">on</span> <span style="color: rgba(128, 128, 128, 1)">*</span>.<span style="color: rgba(128, 128, 128, 1)">*</span> <span style="color: rgba(0, 0, 255, 1)">to</span> root@<span style="color: rgba(255, 0, 0, 1)">'</span><span style="color: rgba(255, 0, 0, 1)">192.168.1.5</span><span style="color: rgba(255, 0, 0, 1)">'</span> identified <span style="color: rgba(0, 0, 255, 1)">by</span> <span style="color: rgba(255, 0, 0, 1)">'</span><span style="color: rgba(255, 0, 0, 1)">123456</span><span style="color: rgba(255, 0, 0, 1)">'</span></pre>
+                            </div>
+                            <p>退出当前用户</p>
+                            <div class="cnblogs_code">
+                                <pre><span style="color: rgba(0, 0, 255, 1)">exit</span></pre>
+                            </div>
+                            <p>查看当前用户的权限</p>
+                            <div class="cnblogs_code">
+                                <pre>show grants;</pre>
+                            </div>
+                            <p>查看用户abc的权限</p>
+                            <div class="cnblogs_code">
+                                <pre>show grants <span style="color: rgba(0, 0, 255, 1)">for</span> abc<span style="color: rgba(0, 128, 0, 1)">@localhost</span>；</pre>
+                            </div>
+                            <h2>二、REVOKE回收权限</h2>
+                            <p>回收用户abc数据库person的insert的权限</p>
+                            <div class="cnblogs_code">
+                                <pre><span style="color: rgba(0, 0, 255, 1)">REVOKE</span> <span style="color: rgba(0, 0, 255, 1)">INSERT</span> <span style="color: rgba(0, 0, 255, 1)">ON</span> PERSON.<span style="color: rgba(128, 128, 128, 1)">*</span> <span style="color: rgba(0, 0, 255, 1)">FROM</span> <span style="color: rgba(255, 0, 0, 1)">abc</span>@<span style="color: rgba(255, 0, 0, 1)">localhost</span>;</pre>
+                            </div>
+                            <p>回收权限</p>
+                            <div class="cnblogs_code">
+<pre><span style="color: rgba(0, 0, 0, 1)">回收person数据库abc的所有权限
+</span><span style="color: rgba(0, 0, 255, 1)">REVOKE</span> <span style="color: rgba(128, 128, 128, 1)">ALL</span> <span style="color: rgba(0, 0, 255, 1)">ON</span> PERSON.<span style="color: rgba(128, 128, 128, 1)">*</span> <span style="color: rgba(0, 0, 255, 1)">FROM</span> abc<span style="color: rgba(0, 128, 0, 1)">@localhost</span><span style="color: rgba(0, 0, 0, 1)">;
+
+回收abc的所有数据库所有权限
+</span><span style="color: rgba(0, 0, 255, 1)">REVOKE</span> <span style="color: rgba(128, 128, 128, 1)">ALL</span> <span style="color: rgba(0, 0, 255, 1)">ON</span> <span style="color: rgba(128, 128, 128, 1)">*</span>.<span style="color: rgba(128, 128, 128, 1)">*</span> <span style="color: rgba(0, 0, 255, 1)">FROM</span> abc<span style="color: rgba(0, 128, 0, 1)">@localhost</span>;</pre>
+                            </div>
+                            <h2>三、删除、修改用户</h2>
+                            <p>在早期版本需要回收用户的权限之后才能删除用户。删除用户建议使用这种办法，有的人会使用delete from user的办法删除，但是有的用户是针对db的权限那么在mysql.db里面也存在记录，而使用drop user的方式都会被删除。</p>
+                            <div class="cnblogs_code">
+                                <pre><span style="color: rgba(0, 0, 255, 1)">DROP</span> <span style="color: rgba(255, 0, 255, 1)">USER</span> abc<span style="color: rgba(0, 128, 0, 1)">@localhost</span>;</pre>
+                            </div>
+                            <p>修改用户</p>
+                            <div class="cnblogs_code">
+                                <pre>RENAME USER  <span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">test</span><span style="color: rgba(128, 0, 0, 1)">'</span>@<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">127.0.0.1</span><span style="color: rgba(128, 0, 0, 1)">'</span> TO  <span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">test</span><span style="color: rgba(128, 0, 0, 1)">'</span>@<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">%</span><span style="color: rgba(128, 0, 0, 1)">'</span></pre>
+                            </div>
+                            <p>&nbsp;</p>
+                            <h2><strong>四、修改用户密码</strong></h2>
+                            <div class="cnblogs_code">
+<pre><span style="color: rgba(0, 0, 255, 1)">use</span><span style="color: rgba(0, 0, 0, 1)"> mysql；
+
+</span><span style="color: rgba(0, 0, 255, 1)">UPDATE</span> <span style="color: rgba(255, 0, 255, 1)">user</span> <span style="color: rgba(0, 0, 255, 1)">SET</span> password<span style="color: rgba(128, 128, 128, 1)">=</span>PASSWORD(<span style="color: rgba(255, 0, 0, 1)">'</span><span style="color: rgba(255, 0, 0, 1)">输入新密码</span><span style="color: rgba(255, 0, 0, 1)">'</span>) <span style="color: rgba(0, 0, 255, 1)">WHERE</span> <span style="color: rgba(255, 0, 255, 1)">user</span><span style="color: rgba(128, 128, 128, 1)">=</span><span style="color: rgba(255, 0, 0, 1)">'</span><span style="color: rgba(255, 0, 0, 1)">用户名</span><span style="color: rgba(255, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">;
+
+FLUSH </span><span style="color: rgba(0, 0, 255, 1)">PRIVILEGES</span>;</pre>
+                            </div>
+                            <h2><strong>五、相关权限授予</strong></h2>
+                            <p><strong>1.创建root用户</strong></p>
+                            <div class="cnblogs_code">
+                                <pre>GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'root' WITH GRANT OPTION;</pre>
+                            </div>
+                            <p><strong>2.创建一个服务器基本的增删改查用户</strong></p>
+                            <div class="cnblogs_code">
+                                <pre>GRANT UPDATE, DELETE, INSERT, SELECT ON *.* TO 'test'@'%' identified by 'test' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0</pre>
+                            </div>
+                            <p><strong>3.创建数据库基本的<strong>增删改查用户</strong></strong></p>
+                            <div class="cnblogs_code">
+                                <pre>GRANT SELECT, INSERT, UPDATE, DELETE, SHOW VIEW, EXECUTE ON `new`.* TO 'test'@'%' identified by  'test';</pre>
+                            </div>
+                            <p><strong>4.授予数据库名以db开头的数据库的权限</strong></p>
+                            <div class="cnblogs_code">
+                                <pre>GRANT SELECT, INSERT, UPDATE, DELETE, SHOW VIEW, EXECUTE ON `db%`.* TO 'perform'@'%'</pre>
+                            </div>
+                            <p><strong>5.创建备份用户权限</strong></p>
+                            <div class="cnblogs_code">
+                                <pre>GRANT SELECT,EVENT,SHOW DATABASES,LOCK TABLES,SUPER,REPLICATION CLIENT,RELOAD ON *.* TO 'backup'@'localhost' identified by 'backup'</pre>
+                            </div>
+                            <p>6.备份恢复用户权限&nbsp;</p>
+                            <div class="cnblogs_code">
+                                <pre>GRANT INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER,CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, TRIGGER ON *.* TO 'restore'@'localhost' identified by '123456'</pre>
+                            </div>
+                            <p>7.复制用户权限&nbsp;</p>
+                            <div class="cnblogs_code">
+                                <pre>GRANT PROCESS, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'repl'@'%' IDENTIFIED BY '123456';</pre>
+                            </div>
+                            <h2><strong>六、权限表字段详解</strong></h2>
+                            <p>基于mysql5.6</p>
+                            <p><strong>user表</strong></p>
+                            <p>user表的权限是基于服务器范围的所有权限，比如用户拥有服务器中所有数据库的select权限那么在user表中的Select_priv列为Y,如果用户单单只拥有某个一数据库的select权限那么user表中的Select_priv为N,会在DB表中记录一条信息在DB表中的select_priv为Y。</p>
+                            <div class="cnblogs_code">
+                                <pre><span style="color: rgba(0, 0, 255, 1)">desc</span> mysql.<span style="color: rgba(255, 0, 255, 1)">user</span>;</pre>
+                            </div>
+                            <p><strong>filed &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;null key default</strong></p>
+                            <table style="height: 946px; width: 100%">
+                                <tbody>
+                                <tr>
+                                    <td>Host</td>
+                                    <td>char(60) &nbsp; &nbsp;</td>
+                                    <td>NO &nbsp;&nbsp;</td>
+                                    <td>PRI&nbsp;</td>
+                                    <td>&nbsp; &nbsp; &nbsp;&nbsp;</td>
+                                    <td>主机名，localhost表示本地登入，%表示不受限制，也可以单独赋予某个IP的访问权限。 &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>User</td>
+                                    <td>char(16)</td>
+                                    <td>NO</td>
+                                    <td>PRI</td>
+                                    <td>&nbsp;</td>
+                                    <td>登入用户名&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Password</td>
+                                    <td>char(41)</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>登入用户密码&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Select_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>select权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Insert_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>insert权限</td>
+                                </tr>
+                                <tr>
+                                    <td>Update_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>update权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Delete_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>delete权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Create_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>create权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Drop_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>drop权限</td>
+                                </tr>
+                                <tr>
+                                    <td>Reload_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>执行刷新和重新加载MySQL各种内部缓存命令的权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Shutdown_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>关闭mysql服务器的权限，不能授予root外的其它用户&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Process_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>执行show processlist命令的权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>File_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>执行SELECT INTO OUTFILE和LOAD DATA INFILE命令&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Grant_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>是否可以将权限授予其它用户&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>References_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>参照表的权限</td>
+                                </tr>
+                                <tr>
+                                    <td>Index_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>创建删除索引的权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Alter_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>ALTER权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Show_db_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>查看有哪些数据库的权限</td>
+                                </tr>
+                                <tr>
+                                    <td>Super_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>Super权限，包括kill权限。&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Create_tmp_table_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>创建创建临时表权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Lock_tables_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>执行lock table权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Execute_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>执行存储过程权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Repl_slave_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>复制相关的权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Repl_client_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>复制相关的权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Create_view_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>创建视图的权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Show_view_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>查看视图的权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Create_routine_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>创建函数、存储过程等权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Alter_routine_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>修改删除函数、存储过程等权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Create_user_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>创建用户的权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Event_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>创建、修改和删除事件的权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Trigger_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>创建、修改和删除触发器的权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Create_tablespace_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>创建表空间的权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>ssl_type</td>
+                                    <td>enum('','ANY','X509','SPECIFIED')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>ssl_cipher</td>
+                                    <td>blob</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>x509_issuer</td>
+                                    <td>blob</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>x509_subject</td>
+                                    <td>blob</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>max_questions</td>
+                                    <td>int(11) unsigned</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                    <td>最多问题数&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>max_updates</td>
+                                    <td>int(11) unsigned</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                    <td>允许的最大更新&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>max_connections</td>
+                                    <td>int(11) unsigned</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                    <td>允许的最大连接&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>max_user_connections</td>
+                                    <td>int(11) unsigned</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>plugin</td>
+                                    <td>char(64)</td>
+                                    <td>YES</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>authentication_string</td>
+                                    <td>text</td>
+                                    <td>YES</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>password_expired</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p><strong>db表</strong></p>
+                            <p>如果授予一个用户单独某个数据库的权限，就会在db表中记录一条相关信息。</p>
+                            <div class="cnblogs_code">
+                                <pre><span style="color: rgba(0, 0, 255, 1)">desc</span> mysql.db;</pre>
+                            </div>
+                            <p><strong><strong>filed &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;null &nbsp; &nbsp;key &nbsp; default</strong></strong></p>
+                            <table style="height: 484px; width: 100%">
+                                <tbody>
+                                <tr>
+                                    <td>Host &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</td>
+                                    <td>char(60) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</td>
+                                    <td>NO &nbsp; &nbsp; &nbsp; &nbsp;</td>
+                                    <td>PRI &nbsp; &nbsp; &nbsp; &nbsp;</td>
+                                    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+                                    <td>主机名，localhost代表只能本地登入，如果是%表示不受限制，也可以单独赋予某个IP的访问权限。</td>
+                                </tr>
+                                <tr>
+                                    <td>Db</td>
+                                    <td>char(64)</td>
+                                    <td>NO</td>
+                                    <td>PRI</td>
+                                    <td>&nbsp;</td>
+                                    <td>数据库名&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>User</td>
+                                    <td>char(16)</td>
+                                    <td>NO</td>
+                                    <td>PRI</td>
+                                    <td>&nbsp;</td>
+                                    <td>用户名&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Select_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>select权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Insert_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>insert权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Update_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>update权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Delete_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>delete权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Create_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>create权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Drop_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>drop权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Grant_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>是否可以将权限授予其它用户&nbsp;&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>References_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Index_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>创建删除索引的权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Alter_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>ALTER权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Create_tmp_table_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>创建临时表的权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Lock_tables_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>执行lock table权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Create_view_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>创建视图的权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Show_view_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>查看视图的权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Create_routine_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>创建函数、存储过程的权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Alter_routine_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>修改删除函数、存储过程的权限&nbsp;&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Execute_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>执行存储过程的权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Event_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>创建、修改、删除事件的权限&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Trigger_priv</td>
+                                    <td>enum('N','Y')</td>
+                                    <td>NO</td>
+                                    <td>&nbsp;</td>
+                                    <td>N</td>
+                                    <td>创建、修改、删除触发器的权限&nbsp;</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p>&nbsp;</p>
+                            <h1 style="color: rgba(0, 128, 128, 1); background-color: rgba(0, 128, 128, 1)"><a name="总结" rel="noopener"></a><span style="color: rgba(0, 0, 0, 1); font-family: 宋体"><strong>总结</strong></span></h1>
+                            <p>&nbsp;使用revoke all privileges并不能收回用户的所有权限，对于用户的单个数据库的权限需要单独回收，具体可以查询mysql.db数据库查看用户的每个数据库的具体权限，如果用户权限太多最快的回收权限的方法是删除该用户再重新授予用户新的权限</p>
+                            <p>&nbsp;</p>
+                            <p><span style="color: rgba(255, 0, 0, 1)">注意：给一个数据库授予一个用户不同连接方式的权限，mysql使用低权限的原则。&nbsp;</span></p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <table style="width: 100%" border="0">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <p><span style="font-size: 14px; color: rgba(55, 199, 191, 1); font-family: 宋体">备注：</span></p>
+                                        <p><span style="color: rgba(55, 199, 191, 1)"><span style="font-size: 14px; font-family: 宋体">&nbsp;&nbsp;&nbsp; 作者：</span><span style="font-size: 14px"><a style="text-decoration: none" title="点击跳转到原文" href="http://www.cnblogs.com/chenmh/" target="_blank" rel="noopener"><span style="color: rgba(55, 199, 191, 1)">pursuer.chen</span></a></span></span></p>
+                                        <p><span style="font-size: 14px; color: rgba(55, 199, 191, 1); font-family: 宋体">&nbsp;&nbsp;&nbsp; 博客：<span style="font-size: 16px"><a id="lnkMyHome" style="text-decoration: none" title="点击跳转到原文" href="http://www.cnblogs.com/chenmh/" target="_blank" rel="noopener"><span style="color: rgba(55, 199, 191, 1)">http://www.cnblogs.com/chenmh</span></a></span></span></p>
+                                        <p><span style="font-size: 14px; color: rgba(55, 199, 191, 1); font-family: 宋体">本站点所有随笔都是原创，欢迎大家转载；但转载时必须注明文章来源，且在文章开头明显处给明链接，否则保留追究责任的权利。</span></p>
+                                        <p><span style="font-size: 14px; color: rgba(55, 199, 191, 1); font-family: 宋体">《欢迎交流讨论》</span></p>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="clear"></div>
+                        <div id="blog_post_info_block" role="contentinfo">
+                            <div id="blog_post_info"></div>
+                            <div class="clear"></div>
+                            <div id="post_next_prev"></div>
+                        </div>
+                        <div class="clear"></div>
+                        <div id="blog_post_info_block">
+                            <div id="blog_post_info">
+                            </div>
+                            <div class="clear"></div>
+                            <div id="post_next_prev"></div>
+                        </div>
+                    </div>
+                    <ul class="postmetadata">
+
+                        <li class="icon_cat" id="BlogPostCategory">
+                            分类            <a href="https://www.cnblogs.com/chenmh/category/847597.html" target="_blank">MySQL 安全</a>
+                        </li>
+                        <li class="icon_bullet" id="EntryTag">
+                            &nbsp;</li>
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    var m = window.__blog.postRendered;
+                    if (m) { m(__$("post")); }
+                </script>
+                <script type="text/javascript">
+                    var m = window.__blog.postRenderPosts;
+                    if (m) { m(); }
+                </script>
+
+                <script>
+                    var cb_entryId = 4533902, cb_entryCreatedDate = '2015-05-28 08:53', cb_postType = 1, cb_postTitle = 'MySQL 权限';
+                    var allowComments = true, cb_blogId = 71142, cb_blogApp = 'chenmh', cb_blogUserGuid = '925488b1-a567-df11-ba8f-001cf0cd104b';
+                    mermaidRender.render()
+                    markdown_highlight()
+                    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");
+                    updatePostStats(
+                        [cb_entryId],
+                        function(id, count) { $("#post_view_count").text(count) },
+                        function(id, count) { $("#post_comment_count").text(count) })
+                </script>
+                <a id="!comments"></a>
+                <div id="blog-comments-placeholder"></div>
+                <div id="comment_form" class="commentform">
+                    <a name="commentform"></a>
+                    <div id="divCommentShow"></div>
+                    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+                    <div id="comment_form_container"></div>
+                    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+                    <div id="cnblogs_ch"></div>
+                    <div id="opt_under_post"></div>
+                    <div id="cnblogs_c1" class="under-post-card">
+                        <div id='div-gpt-ad-1592365906576-0' style='width: 300px; height: 250px;'></div>
+                    </div>
+                    <div id="under_post_card1"></div>
+                    <div id="cnblogs_c2" class="under-post-card">
+                        <a href="https://cloud.tencent.com/act/pro/618season?fromSource=gwzcw.6511354.6511354.6511354&amp;utm_medium=cps&amp;utm_id=gwzcw.6511354.6511354.6511354&amp;cps_key=6a15b90f1178f38fb09b07f16943cf3e" rel="nofollow" target="_blank" onclick="countCreativeClicks('C2-腾讯云-618采购季')">
+                            <img src="https://img2022.cnblogs.com/blog/35695/202206/35695-20220602121749133-1705748504.jpg" alt="" onload="countCreativeImpressions('C2-腾讯云-618采购季')" />
+                        </a>
+                    </div>
+                    <div id="under_post_card2"></div>
+                    <div id="HistoryToday" class="under-post-card"></div>
+                    <script type="text/javascript">
+                        var commentManager = new blogCommentManager();
+                        commentManager.renderComments(0);
+                        fixPostBody();
+
+                        window.tocManager.displayDisableTocTips = false;
+                        window.tocManager.generateToc();
+                        setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverT2();
+                        deliverC1C2();
+                        loadNewsAndKb();
+                        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+                        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+                        loadOptUnderPost();
+                        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+                    </script>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <script type="text/javascript">
+            var m = window.__blog.contentRendered;
+            if (m) { m(__$("content")); }
+        </script>
+
+        <div id="sidebar">
+            <div id="about">
+                <div>
+                    <h2 id="about_title">About</h2>
+                    <div id="about_body">
+                        <div id="sidebar_news"></div>
+                        <script type="text/javascript">loadBlogNews();</script>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                var m = window.__blog.aboutRendered;
+                if (m) { m(__$("about")); }
+            </script>
+            <div id="mySearchWrapper">
+                <div id="mySearch">
+                    <input type="image" src="/skins/minyx2_lite/images/btnsearch.gif" id="btnZzk"  class="submit" onclick="zzk_go();return false;"/>
+                    <label class="lb_search"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="keyword" /></label>
+                </div>
+            </div>
+            <script type="text/javascript">
+                var m = window.__blog.searchFormRendered;
+                if (m) { m(__$("searchform")); }
+            </script>
+            <div id="sideMain">
+            </div>
+            <div id="sideRight">
+            </div>
+            <div id="sideLeft">
+            </div>
+            <div id="sideContainer">
+            </div>
+            <script type="text/javascript">
+                $.ajax({
+                    url: '/' + currentBlogApp + '/ajax/Minyx2_Lite_SideColumn.aspx',
+                    data: '{}',
+                    type: 'post',
+                    dataType: 'text',
+                    contentType: 'application/json; charset=utf-8',
+                    success: function (data) {
+                        if (data) {
+                            $("#sideContainer").html(data);
+                            $.ajax({
+                                url: getAjaxBaseUrl() + 'TopLists.aspx',
+                                type: 'get',
+                                dataType: 'text',
+                                success: function (topLists) {
+                                    if (topLists) {
+                                        $("#sideContainer").append(topLists);
+                                    }
+                                    var m = window.__blog.sideContainerRendered;
+                                    if (m) { m(__$("sideContainer")); }
+                                    window.__blog.sidebar.__layout();
+                                }
+                            });
+                        }
+                    }
+                });
+
+            </script>
+        </div>
+
+        <script type="text/javascript">
+            var m = window.__blog.sidebarRendered;
+            if (m) { m(__$("sidebar")); }
+        </script>
+
+        <div id="footer">
+            <p id="logoFoot">
+                <a href="http://www.spiga.com.mx/" title="Agencia Interactiva Spiga">www.spiga.com.mx</a>
+            </p>
+            <div class="footText">
+                <p>
+                    Copyright &copy; 2022 pursuer.chen
+                    <br /><span id="poweredby">Powered by .NET 6 on Kubernetes</span>
+
+                </p>
+                <p>
+                    <a href="http://www.cnblogs.com">博客园</a>
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var m = window.__blog.wrapperRendered;
+        if (m) { m(__$("wrapper")); }
+    </script>
+
+</div>
+<script type="text/javascript">
+    var m = window.__blog.containerRendered;
+    if (m) { m(__$("container")); }
+</script>
+
+
+
+
+<input type="hidden" id="antiforgery_token" value="CfDJ8AuMt_3FvyxIgNOR82PHE4klYfdQjwjpyFNyBDrlDhi0dUGQadrDydYHY3dudbnP33VnkKI5iNFtiUe6_LM7rpgs2tKmfzvggCoDbsFX2ma_z5IRr4eCy9B992i87yPe9UbM6RO9_IZK6F61J4UVLJE"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-476124-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var kv = getGACustom();
+    if (kv) {
+        gtag('set', kv);
+    }
+    gtag('config', 'UA-476124-1');
+</script>
+<script defer src="https://hm.baidu.com/hm.js?866c9be12d4a814454792b1fd0fed295"></script>
+</body>
+</html>
