@@ -378,8 +378,6 @@ ALTER TABLE 表名 ADD CONSTRAINT 外键名称 FOREIGN KEY (外键字段名称) 
 ALTER TABLE 表名 DROP FOREIGN KEY 外键名称;
 ```
 
-
-
 #### 1.8.3  练习
 
 根据上述语法创建员工表和部门表，并添加上外键约束：
@@ -437,7 +435,6 @@ alter table emp drop FOREIGN key fk_emp_dept;
 ```sql
 alter table emp add CONSTRAINT fk_emp_dept FOREIGN key(dep_id) REFERENCES dept(id);
 ```
-
 
 
 ## 2，数据库设计
@@ -552,7 +549,7 @@ alter table emp add CONSTRAINT fk_emp_dept FOREIGN key(dep_id) REFERENCES dept(i
 
 * 实现方式
 
-  ==建立第三张中间表，中间表至少包含两个外键，分别关联两方主键==
+    建立第三张中间表，中间表至少包含两个外键，分别关联两方主键.
 
 * 案例
 

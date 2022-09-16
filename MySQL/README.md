@@ -10,7 +10,7 @@
 不用理会上面的登录和注册按钮，直接点击`No thanks, just start my download.`就可以下载。
 
 
-## 二、安装(解压)
+## 二、安装
 
 下载完成后我们得到的是一个压缩包，将其解压，我们就可以得到MySQL 5.7.24的软件本体了(就是一个文件夹)，我们可以把它放在你想安装的位置。
 
@@ -30,7 +30,7 @@
 
 
 在`系统变量`中找到并**双击**`Path`
-```
+```bash
 %MYSQL_HOME%\bin
 ```
 
@@ -158,7 +158,17 @@ mysqld -remove mysql
 - 查找Linux占用端口服务&并干掉
 ```bash
 lsof -i:端口号
-kill -9 num_pid
+"""
+COMMAND  PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+gost    6872 root    6u  IPv6 195768      0t0  TCP *:10110 (LISTEN)
+"""
+
+# 关闭对应端口的服务
+## 会得到PID
+lsof -t -i:10110
+
+## 关闭对应端口的服务
+kill -9 $(lsof -t -i:10110)
 ```
 
 ### Linux安装MySQL
@@ -277,6 +287,31 @@ SET FOREIGN_KEY_CHECKS = 1;
 然后重新导入即可。
 
 ```
+## MySQL建议
 
+- 建议使用Docker或者Docke-compose运行MySQL服务.
 
+- docker命令行启动
 
+```bash
+# 命令行启动
+docker run --rm -e MYSQL_ROOT_PASSWORD=abc123456 -p 3306:3306 --name mysql -d mysql:8.0.30
+```
+- docker-compose启动 `docker-compose.yml`
+
+```yaml
+# 可以根据具体映射文件修改
+version: "3.9"
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:8.0.30
+    environment:
+      MYSQL_ROOT_PASSWORD: abc123456
+    volumes:
+      - "/root/config/mysql/log/:/var/log/"
+      - "/root/config/mysql/data/:/var/lib/mysql/"
+      - "/root/config/mysql/conf/my.cnf:/etc/mysql/conf.d/my.cnf"
+    ports:
+      - "3306:3306"
+```
