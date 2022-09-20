@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
-
 public class JdbcConfig {
     @Value("${jdbc.driver}")
     private String driver;
@@ -19,7 +18,7 @@ public class JdbcConfig {
     private String password;
 
     @Bean
-    public DataSource dataSource(){
+    public DataSource dataSource() {
         DruidDataSource ds = new DruidDataSource();
         ds.setDriverClassName(driver);
         ds.setUrl(url);

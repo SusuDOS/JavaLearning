@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.itheima</groupId>
@@ -78,6 +79,7 @@
     </dependencies>
 
     <!--定义属性-->
+    <!-- 从POM中读取变量属性值 -->
     <properties>
         <spring.version>5.2.10.RELEASE</spring.version>
         <junit.version>4.12</junit.version>
@@ -128,6 +130,7 @@
 
     <build>
         <resources>
+            <!-- 使得properties可以将属性值读取到 propertier 中. -->
             <!--设置资源目录，并设置能够解析${}-->
             <!-- 设置可以让其他模块在对应的模块resources中使用该pom中定义properties属性-->
             <resource>

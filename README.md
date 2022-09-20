@@ -58,8 +58,7 @@ select * from emp right join dept on emp.dep_id = dept.did;
 
 - DCL(账号控制)
 
-
-## git操作
+## Git操作
 
 ## Spring
 
