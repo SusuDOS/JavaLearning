@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dubbo="http://dubbo.apache.org/schema/dubbo" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+
+    <!--<context:component-scan base-package="com.itheima.service" />-->
+    <!--dubbo的配置-->
+    <!-- 默认是20880,可以修改其他端口,这个是生产端.-->
+    <!-- <dubbo:protocol port="20881" /> -->
+    <dubbo:protocol name="" port="20881" />
+    <!--1.配置项目的名称,唯一-->
+    <dubbo:application name="dubbo-service"/>
+    <!--2.配置注册中心的地址-->
+    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
+    <!--3.配置dubbo包扫描-->
+    <dubbo:annotation package="com.itheima.service.impl" />
+
+    <!-- 元数据配置 -->
+    <dubbo:metadata-report address="zookeeper://127.0.0.1:2181" />
+</beans>

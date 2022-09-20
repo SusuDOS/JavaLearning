@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
-//@MapperScan("com.itheima.dao")与dao接口的Mapper注解二选一即可.
+// @MapperScan("com.itheima.dao")与dao接口的Mapper注解二选一即可.
 public class Mybatisplus01QuickstartApplication {
 
     public static void main(String[] args) {

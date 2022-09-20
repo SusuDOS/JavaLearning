@@ -1,0 +1,51 @@
+version: '3.9'
+# configration_path:/conf/zoo.cfg
+services:
+  zk1:
+    # Dockerfile使用build(.表示当前目录)，image使用现成的镜像
+    # build: .
+    image: zookeeper:3.8.0-temurin
+    # 跟随一起启动
+    # restart: always
+    container_name: zk1
+    ports:
+      - "2181:2181"
+    environment:
+      ZOO_MY_ID: 1
+      ZOO_SERVERS: server.1=zk1:2888:3888;2181 server.2=zk2:2888:3888;2181 server.3=zk3:2888:3888;2181
+
+  zk2:
+    image: zookeeper:3.8.0-temurin
+    # 跟随一起启动
+    # restart: always
+    container_name: zk2
+    ports:
+      - "2182:2181"
+    environment:
+      ZOO_MY_ID: 2
+      ZOO_SERVERS: server.1=zk1:2888:3888;2181 server.2=zk2:2888:3888;2181 server.3=zk3:2888:3888;2181
+
+  zk3:
+    image: zookeeper:3.8.0-temurin
+    # 跟随一起启动
+    # restart: always
+    container_name: zk3
+    ports:
+      - "2183:2181"
+    environment:
+      ZOO_MY_ID: 3
+      ZOO_SERVERS: server.1=zk1:2888:3888;2181 server.2=zk2:2888:3888;2181 server.3=zk3:2888:3888;2181
+  dubbo-admin:
+      image: apache/dubbo-admin:0.4.0
+      container_name: dubbo-admin
+      # 等待zk启动后再启动
+      depends_on:
+        - zk1
+        - zk2
+        - zk3
+      ports:
+        - 8080:8080
+      environment:
+        - admin.registry.address=zookeeper://zk:2181
+        - admin.config-center=zookeeper://zk:2181
+        - admin.metadata-report.address=zookeeper://zk:2181

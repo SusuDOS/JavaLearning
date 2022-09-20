@@ -1,5 +1,7 @@
 ## SpringCloud
 
+<font color=red>警告：请参看pinda通用权限中跑通的nacos配置和使用安装流程，此文档作废，当且仅当作为一个错误演示。原因是:nacos配置数据库结构tag不对应</font>
+
 - 多nacos部署+Nginx
 
 资源位置:SpringCloud+RabbitMQ+Docker+Redis+搜索+分布式\实用篇

@@ -5,6 +5,7 @@ import com.itheima.domain.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 
+// 自定义dao以及继承
 @Mapper
 public interface UserDao extends BaseMapper<User> {
     // 自定义一个保存.
