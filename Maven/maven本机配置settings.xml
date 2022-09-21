@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <!-- maven本机配置 -->
+    <localRepository>C:\MyTools\apache-maven\MAVEN_RESP</localRepository>
+    <proxies>
+        <proxy>
+            <id>optional</id>
+            <active>true</active>
+            <protocol>http</protocol>
+            <!-- <username>proxyuser</username>-->
+            <!--<password>proxypass</password> -->
+            <host>127.0.0.1</host>
+            <port>10809</port>
+            <!-- 无需通过代理的站点,多个用|隔开. -->
+            <nonProxyHosts>local.net|some.host.com</nonProxyHosts>
+        </proxy>
+    </proxies>
+    <mirrors>
+        <!--
+        原资料文档给定的，未能work，故而注释掉.
+        <mirror>
+        <id>mirrorId</id>
+        <mirrorOf>repositoryId</mirrorOf>
+        <name>Human Readable Name for this Mirror.</name>
+        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        </mirror>
+        -->
+        <!-- <mirrorOf>central</mirrorOf> -->
+        <!--
+        <mirror>
+            <id>alimaven</id>
+            <name>aliyun maven</name>
+            <url>https://maven.aliyun.com/repository/public</url>            
+            <mirrorOf>*</mirrorOf>
+        </mirror>
+        -->
+        <mirror>
+            <id>alimaven</id>
+            <name>office maven</name>
+            <url>https://repo.maven.apache.org/maven2/</url>
+            <mirrorOf>*</mirrorOf>
+        </mirror>
+    </mirrors>
+    <!--
+    配置私服信息
+    <mirror>
+        <id>maven-public</id>
+        <name>privateRepository</name>
+        <url>http://smilecat.gaoshuye.top:8088/repository/maven-public/</url>
+        <mirrorOf>*</mirrorOf>
+    </mirror>
+    配置私服登陆信息以便登陆
+    <servers>
+        <server>
+            <id>itheima-release</id>
+            <username>admin</username>
+            <password>admin</password>
+        </server>
+        <server>
+            <id>itheima-snapshot</id>
+            <username>admin</username>
+            <password>admin</password>
+        </server>
+    </servers>
+    -->
+    <!-- <localRepository>/usr/local/apache-maven-3.8.6/MAVEN_RESP</localRepository> -->
+
+    <profiles>
+        <profile>
+            <id>jdk-1.8</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+                <jdk>1.8</jdk>
+            </activation>
+            <properties>
+                <maven.compiler.source>1.8</maven.compiler.source>
+                <maven.compiler.target>1.8</maven.compiler.target>
+                <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+            </properties>
+        </profile>
+    </profiles>
+</settings>

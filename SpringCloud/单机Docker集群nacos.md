@@ -129,108 +129,130 @@ services:
 
 # 真正的单机nacos集群
 
-单台电脑运行docker，形成一个容器运行讴歌nacos，形成集群，具体配置信息如下所示，经测试，完美可运行：
+单台电脑运行docker，形成一个容器运行多个nacos，形成集群，具体配置信息如下所示，经测试，完美可运行：
 
 - docker-compose.yml文件配置
 
 ```yml
 version: "3.9"
-
 services:
   mysql:
-    image: mysql:5.7.25
+    container_name: mysql
+    image: mysql:8.0.30
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: abc123456
     volumes:
-      - "/usr/local/etc/mysqlContain/log/:/var/log/"
-      - "/usr/local/etc/mysqlContain/data/:/var/lib/mysql/"
-      - "/usr/local/etc/mysqlContain/conf/hmy.cnf:/etc/mysql/conf.d/hmy.cnf"
+      - "/root/DistributionDocker/cloud-demo/config/mysql/log/:/var/log/"
+      - "/root/DistributionDocker/cloud-demo/config/mysql/data/:/var/lib/mysql/"
+      - "/root/DistributionDocker/cloud-demo/config/mysql/conf/my.cnf:/etc/mysql/conf.d/my.cnf"
     ports:
       - "3306:3306"
   nacos1:
-    image:  nacos/nacos-server:v2.1.0
+    container_name: nacos1
+    image: nacos/nacos-server:v2.1.0
+    depends_on:
+      - mysql
     environment:
       MODE: cluster
+      NACOS_SERVERS: 91.199.209.120:8841 91.199.209.120:8842 91.199.209.120:8843
       SPRING_DATASOURCE_PLATFORM: mysql
       MYSQL_SERVICE_HOST: mysql
       MYSQL_SERVICE_PORT: 3306
       MYSQL_SERVICE_USER: root
-      MYSQL_SERVICE_PASSWORD: root
+      MYSQL_SERVICE_PASSWORD: abc123456
       MYSQL_SERVICE_DB_NAME: nacos_config
+      MYSQL_SERVICE_DB_PARAM: characterEncoding=utf8&connectTimeout=3000&socketTimeout=5000&autoReconnect=true&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
     ports:
       - "8841:8848"
   nacos2:
-    image:  nacos/nacos-server:v2.1.0
+    container_name: nacos2
+    image: nacos/nacos-server:v2.1.0
+    depends_on:
+      - mysql
     environment:
       MODE: cluster
+      NACOS_SERVERS: 91.199.209.120:8841 91.199.209.120:8842 91.199.209.120:8843
       SPRING_DATASOURCE_PLATFORM: mysql
       MYSQL_SERVICE_HOST: mysql
       MYSQL_SERVICE_PORT: 3306
       MYSQL_SERVICE_USER: root
-      MYSQL_SERVICE_PASSWORD: root
+      MYSQL_SERVICE_PASSWORD: abc123456
       MYSQL_SERVICE_DB_NAME: nacos_config
+      MYSQL_SERVICE_DB_PARAM: characterEncoding=utf8&connectTimeout=3000&socketTimeout=5000&autoReconnect=true&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
     ports:
       - "8842:8848"
   nacos3:
-    image:  nacos/nacos-server:v2.1.0
+    container_name: nacos3
+    image: nacos/nacos-server:v2.1.0
+    depends_on:
+      - mysql
     environment:
       MODE: cluster
+      NACOS_SERVERS: 91.199.209.120:8841 91.199.209.120:8842 91.199.209.120:8843
       SPRING_DATASOURCE_PLATFORM: mysql
       MYSQL_SERVICE_HOST: mysql
       MYSQL_SERVICE_PORT: 3306
       MYSQL_SERVICE_USER: root
-      MYSQL_SERVICE_PASSWORD: root
+      MYSQL_SERVICE_PASSWORD: abc123456
       MYSQL_SERVICE_DB_NAME: nacos_config
+      MYSQL_SERVICE_DB_PARAM: characterEncoding=utf8&connectTimeout=3000&socketTimeout=5000&autoReconnect=true&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
     ports:
       - "8843:8848"
   nginx:
     image: nginx:stable
+    container_name: nginx
+    depends_on:
+      - nacos1
+      - nacos2
+      - nacos3
     volumes:
-      - "/usr/local/etc/nginxContain/conf/nginx.conf:/etc/nginx/nginx.conf"
+      - "/root/DistributionDocker/cloud-demo/config/nginx/nginx.conf:/etc/nginx/nginx.conf"
     ports:
-      - "8080:80"
-
+      - "8090:80"
 ```
 - nginx文件配置
 
-```conf
+```config
 user  nginx;
 worker_processes  auto;
-
-error_log  /var/log/nginx/error.log notice;
-pid        /var/run/nginx.pid;
-
 
 events {
     worker_connections  1024;
 }
 
-
 http {
-    include       /etc/nginx/mime.types;
+    include       mime.types;
     default_type  application/octet-stream;
-
-    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
-                      '$status $body_bytes_sent "$http_referer" '
-                      '"$http_user_agent" "$http_x_forwarded_for"';
-
-    access_log  /var/log/nginx/access.log  main;
 
     sendfile        on;
     keepalive_timeout  65;
 
-    include /etc/nginx/conf.d/*.conf;
-    upstream cluster-nacos {
-        server nacos1:8848;
-        server nacos2:8848;
-        server nacos3:8848;
+    upstream nginx-cluster{
+        # 没有work,用ip.
+        # server nacos1:8841;
+        # server nacos2:8842;
+        # server nacos3:8843;
+        server 91.199.209.120:8841;
+        server 91.199.209.120:8842;
+        server 91.199.209.120:8843;        
     }
     server {
         listen       80;
-        server_name  smilecat.gaoshuye.top;
+        listen  [::]:80;
+        server_name   smilecat.gaoshuye.top;
 
         location /nacos {
-            proxy_pass http://cluster-nacos;
+            proxy_pass http://nginx-cluster;
+        }
+
+        location / {
+            root   /usr/share/nginx/html;
+            index  index.html index.htm;
+        }
+
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   /usr/share/nginx/html;
         }
     }
 }

@@ -1,0 +1,75 @@
+version: "3.9"
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:8.0.30
+    environment:
+      MYSQL_ROOT_PASSWORD: abc123456
+    volumes:
+      - "/root/DistributionDocker/cloud-demo/config/mysql/log/:/var/log/"
+      - "/root/DistributionDocker/cloud-demo/config/mysql/data/:/var/lib/mysql/"
+      - "/root/DistributionDocker/cloud-demo/config/mysql/conf/my.cnf:/etc/mysql/conf.d/my.cnf"
+    ports:
+      - "3306:3306"
+  nacos1:
+    container_name: nacos1
+    image: nacos/nacos-server:v2.1.0
+    depends_on:
+      - mysql
+    environment:
+      MODE: cluster
+      NACOS_SERVERS: 91.199.209.120:8841 91.199.209.120:8842 91.199.209.120:8843
+      SPRING_DATASOURCE_PLATFORM: mysql
+      MYSQL_SERVICE_HOST: mysql
+      MYSQL_SERVICE_PORT: 3306
+      MYSQL_SERVICE_USER: root
+      MYSQL_SERVICE_PASSWORD: abc123456
+      MYSQL_SERVICE_DB_NAME: nacos_config
+      MYSQL_SERVICE_DB_PARAM: characterEncoding=utf8&connectTimeout=3000&socketTimeout=5000&autoReconnect=true&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+    ports:
+      - "8841:8848"
+  nacos2:
+    container_name: nacos2
+    image: nacos/nacos-server:v2.1.0
+    depends_on:
+      - mysql
+    environment:
+      MODE: cluster
+      NACOS_SERVERS: 91.199.209.120:8841 91.199.209.120:8842 91.199.209.120:8843
+      SPRING_DATASOURCE_PLATFORM: mysql
+      MYSQL_SERVICE_HOST: mysql
+      MYSQL_SERVICE_PORT: 3306
+      MYSQL_SERVICE_USER: root
+      MYSQL_SERVICE_PASSWORD: abc123456
+      MYSQL_SERVICE_DB_NAME: nacos_config
+      MYSQL_SERVICE_DB_PARAM: characterEncoding=utf8&connectTimeout=3000&socketTimeout=5000&autoReconnect=true&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+    ports:
+      - "8842:8848"
+  nacos3:
+    container_name: nacos3
+    image: nacos/nacos-server:v2.1.0
+    depends_on:
+      - mysql
+    environment:
+      MODE: cluster
+      NACOS_SERVERS: 91.199.209.120:8841 91.199.209.120:8842 91.199.209.120:8843
+      SPRING_DATASOURCE_PLATFORM: mysql
+      MYSQL_SERVICE_HOST: mysql
+      MYSQL_SERVICE_PORT: 3306
+      MYSQL_SERVICE_USER: root
+      MYSQL_SERVICE_PASSWORD: abc123456
+      MYSQL_SERVICE_DB_NAME: nacos_config
+      MYSQL_SERVICE_DB_PARAM: characterEncoding=utf8&connectTimeout=3000&socketTimeout=5000&autoReconnect=true&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+    ports:
+      - "8843:8848"
+  nginx:
+    image: nginx:stable
+    container_name: nginx
+    depends_on:
+      - nacos1
+      - nacos2
+      - nacos3
+    volumes:
+      - "/root/DistributionDocker/cloud-demo/config/nginx/nginx.conf:/etc/nginx/nginx.conf"
+    ports:
+      - "8090:80"

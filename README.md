@@ -223,7 +223,7 @@ public interface UserDao extends BaseMapper<User> {
 
 ## SpringCloud微服务
 
-内容过多...没有使用到一个具体的项目上，暂定后续处理。
+内容过多...没有使用到一个具体的项目上，暂定后续处理,nacos配置以及在Springboot中的配置信息需要留意，容量较大。
 
 - 微服务保护
 
@@ -245,7 +245,27 @@ public interface UserDao extends BaseMapper<User> {
 
 ## RabbitMQ消息队列
 
+<font color=red>当前未找到使用该技术的项目,需要项目支撑以便有效更新...</font>
+
 ## Redis&框架调用Redis
+
+### Redis实战
+
+内容为黑马点评(hm-dianping)，主要使用的技术涉及后端的具体，前端的调用配合。使用了Redis缓存，没有使用SpringCloud，没有使用RabbitMQ消息队列。
+
+- 01.短信登录
+- 02.商户查询缓存
+- 03.优惠券秒杀
+- 04.Feed_GEO_BitMap_HyperLogLog
+
+### Redis高级
+- 01-分布式缓存
+- 02-多级缓存
+- 03-Redis最佳实践
+
+### Redis原理
+
+- 主要是操作Redis的函数介绍
 
 ## 编程小Trip
 
