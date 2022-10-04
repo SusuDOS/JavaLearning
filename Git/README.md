@@ -6,7 +6,7 @@ git版本控制，由于idea版本的不一致可能存在入口不一致的可�
 
 ```bash
 # 配置信息
-git config --global user.email "wd32941****@163.com"
+git config --global user.email "wd3***********@163.com"
 git config --global user.name "SusuDOS"
 
 # 删除本地标签

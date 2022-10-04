@@ -1,10 +1,11 @@
-package doSuanFa;
 
-public class myTest {
+public class CombineTS {
     public static void main(String[] args) {
-        // ffmpeg -i "concat:001.ts|002.ts|003.ts|004.ts" -acodec copy -vcodec copy -absf aac_adtstoasc out.mp4
-        int len = 147;
+        // ffmpeg -i "concat:001.ts|002.ts|003.ts|004.ts" -acodec copy -vcodec copy
+        // -absf aac_adtstoasc out.mp4
+        int len = 325;
         int numZero = String.valueOf(len).length();
+        numZero = 6;
         StringBuffer sb = new StringBuffer();
         sb.append("ffmpeg -i \"concat: ");
         String line = "%0" + numZero + "d.ts|";
