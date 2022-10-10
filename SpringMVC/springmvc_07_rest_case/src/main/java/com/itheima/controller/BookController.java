@@ -1,23 +1,28 @@
 package com.itheima.controller;
 
-import com.itheima.domain.Book;
-import org.springframework.web.bind.annotation.*;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.itheima.domain.Book;
 
 @RestController
 @RequestMapping("/books")
 public class BookController {
 
     @PostMapping
-    public String save(@RequestBody Book book){
-        System.out.println("book save ==> "+ book);
+    public String save(@RequestBody Book book) {
+        System.out.println("book save ==> " + book);
         return "{'module':'book save success'}";
     }
 
     @GetMapping
-    public List<Book> getAll(){
+    public List<Book> getAll() {
         System.out.println("book getAll is running ...");
         List<Book> bookList = new ArrayList<Book>();
 
@@ -43,17 +48,3 @@ public class BookController {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

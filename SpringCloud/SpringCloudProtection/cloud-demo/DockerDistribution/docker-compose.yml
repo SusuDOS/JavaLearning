@@ -1,0 +1,31 @@
+version: "3.9"
+services:
+  nacos:
+    container_name: nacos
+    image: nacos/nacos-server:v2.1.0
+    environment:
+      MODE: standalone
+    ports:
+      - "8848:8848"
+  mysql:
+    container_name: mysql
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_password: abc123456
+    volumes:
+      - "/usr/local/etc/mysqlContain/log/:/var/log/"
+      - "/usr/local/etc/mysqlContain/data/:/var/lib/mysql/"
+      - "/usr/local/etc/mysqlContain/conf/hmy.cnf:/etc/mysql/conf.d/hmy.cnf"
+    ports:
+      - "3306:3306"
+  userservice:
+    container_name: userservice
+    build: ./user-service
+  orderservice:
+    container_name: orderservice
+    build: ./order-service
+  gateway:
+    container_name: gateway
+    build: ./gateway
+    ports:
+      - "10010:10010"

@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:8.0.30
+    environment:
+      MYSQL_ROOT_PASSWORD: abc123456
+    ports:
+      - "3306:3306"
+  nacos:
+    container_name: nacos
+    image: nacos/nacos-server:v2.1.0
+    depends_on:
+      - mysql
+    environment:
+      MODE: standalone
+      # SPRING_DATASOURCE_PLATFORM: mysql
+      # MYSQL_SERVICE_HOST: mysql
+      # MYSQL_SERVICE_PORT: 3306
+      # MYSQL_SERVICE_USER: root
+      # MYSQL_SERVICE_PASSWORD: abc123456
+      # MYSQL_SERVICE_DB_NAME: nacos_config
+      # MYSQL_SERVICE_DB_PARAM: characterEncoding=utf8&connectTimeout=3000&socketTimeout=5000&autoReconnect=true&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+    ports:
+      - "8848:8848"

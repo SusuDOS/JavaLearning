@@ -1,16 +1,17 @@
 package com.itheima.dao;
 
-import com.itheima.domain.Book;
+import java.util.List;
+
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
-import java.util.List;
+import com.itheima.domain.Book;
 
 public interface BookDao {
 
-//    @Insert("insert into tbl_book values(null,#{type},#{name},#{description})")
+    // @Insert("insert into tbl_book values(null,#{type},#{name},#{description})")
     @Insert("insert into tbl_book (type,name,description) values(#{type},#{name},#{description})")
     public void save(Book book);
 

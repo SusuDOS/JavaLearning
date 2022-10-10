@@ -1,15 +1,17 @@
 package com.itheima.service;
 
-import com.itheima.domain.Book;
+import java.util.List;
+
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import com.itheima.domain.Book;
 
 @Transactional
 public interface BookService {
 
     /**
      * 保存
+     * 
      * @param book
      * @return
      */
@@ -17,6 +19,7 @@ public interface BookService {
 
     /**
      * 修改
+     * 
      * @param book
      * @return
      */
@@ -24,6 +27,7 @@ public interface BookService {
 
     /**
      * 按id删除
+     * 
      * @param id
      * @return
      */
@@ -31,6 +35,7 @@ public interface BookService {
 
     /**
      * 按id查询
+     * 
      * @param id
      * @return
      */
@@ -38,6 +43,7 @@ public interface BookService {
 
     /**
      * 查询全部
+     * 
      * @return
      */
     public List<Book> getAll();
