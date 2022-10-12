@@ -21,7 +21,7 @@ public class AccountTCCServiceImpl implements AccountTCCService {
     @Autowired
     private AccountFreezeMapper freezeMapper;
 
-    // 为什么这里添加事务，下面没添加？
+    // 为什么这里添加事务，下面没添加？个人认为是失误，手动添加上...
 
     @Override
     @Transactional

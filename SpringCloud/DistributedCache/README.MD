@@ -27,7 +27,7 @@ services:
 ```bash
 # 路径: /usr/local/etc/redisContain/redis1/conf
 
-# 设置密码 requirepass m2zT_cCmg~B2TYp-5_
+# 设置密码 requirepass abc123456
 
 # 外网可用则要注释 # bind 127.0.0.1 -::1
 
@@ -38,10 +38,10 @@ services:
 
 ```bash
 # 直接进入容器内
-docker exec -it redis1 sh redis-cli -a m2zT_cCmg~B2TYp-5_
+docker exec -it redis1 sh redis-cli -a abc123456
 
 # 宿主机连接进去
-redis-cli -a m2zT_cCmg~B2TYp-5_
+redis-cli -a abc123456
 ```
 
 - 不带密码
@@ -260,13 +260,13 @@ docker exec -it redis1 sh
 
 # 创建集群
 # 每个主节点有一个镜像，默认为：拆分的前半部分为主，后半部分为从.
-redis-cli -a m2zT_cCmg~B2TYp-5_ --cluster create --cluster-replicas 1 \
+redis-cli -a abc123456 --cluster create --cluster-replicas 1 \
 91.199.209.120:8001 91.199.209.120:8002 91.199.209.120:8003 91.199.209.120:8004 91.199.209.120:8005 91.199.209.120:8006
 
 # 测试集群方式存
 # 进入到redis1
-# redis-cli -c -a m2zT_cCmg~B2TYp-5_ -p 8001
-redis-cli -c -a m2zT_cCmg~B2TYp-5_ -h 91.199.209.120 -p 8001
+# redis-cli -c -a abc123456 -p 8001
+redis-cli -c -a abc123456 -h 91.199.209.120 -p 8001
 ```
 
 ## 新增or移除redis
@@ -277,10 +277,10 @@ redis-cli -c -a m2zT_cCmg~B2TYp-5_ -h 91.199.209.120 -p 8001
 
 ```bash
 # 默认新增为主节点
-redis-cli -a m2zT_cCmg~B2TYp-5_ --cluster add-node 91.199.209.120:8007 91.199.209.120:8001
+redis-cli -a abc123456 --cluster add-node 91.199.209.120:8007 91.199.209.120:8001
 
 # 分配插槽到新节点
-redis-cli -a m2zT_cCmg~B2TYp-5_ --cluster reshard 91.199.209.120:8007
+redis-cli -a abc123456 --cluster reshard 91.199.209.120:8007
 
 # 移动插槽
 ```
@@ -293,7 +293,7 @@ PS：移除是移走插槽，再删除节点！
 # 查看redis内部节点状态：cluster nodes
 # 登陆到容器内：docker exec -it redis1 sh
 # 注意ip为显示的ip.
-redis-cli  -a m2zT_cCmg~B2TYp-5_ --cluster del-node 172.24.0.1:8007 0e1a99814da384191d710130046d559af573de29
+redis-cli  -a abc123456 --cluster del-node 172.24.0.1:8007 0e1a99814da384191d710130046d559af573de29
 ```
 
 ### 加入则为从节点
@@ -303,7 +303,7 @@ redis-cli  -a m2zT_cCmg~B2TYp-5_ --cluster del-node 172.24.0.1:8007 0e1a99814da3
 ```bash
 # 已有主节点id：48c9efc03172d94c4aaa01b330eb309a1711d567
 # 新加为：8007，由8001广播给整个集群,这个是新加入的.
-redis-cli -a m2zT_cCmg~B2TYp-5_ --cluster add-node 91.199.209.120:8007 91.199.209.120:8001  \
+redis-cli -a abc123456 --cluster add-node 91.199.209.120:8007 91.199.209.120:8001  \
 --cluster-slave   --cluster-master-id 48c9efc03172d94c4aaa01b330eb309a1711d567
 ```
 
@@ -320,6 +320,6 @@ redis-cli -a m2zT_cCmg~B2TYp-5_ --cluster add-node 91.199.209.120:8007 91.199.20
 
 ```bash
 # 进入8004的redis容器中！
-redis-cli -a m2zT_cCmg~B2TYp-5_ -c -p 8004
+redis-cli -a abc123456 -c -p 8004
 cluster failover
 ```

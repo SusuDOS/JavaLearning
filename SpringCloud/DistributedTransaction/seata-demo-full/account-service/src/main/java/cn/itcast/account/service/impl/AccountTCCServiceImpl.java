@@ -6,7 +6,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import cn.itcast.account.entity.AccountFreeze;
 import cn.itcast.account.mapper.AccountFreezeMapper;
-// import cn.itcast.account.mapper.AccountFreezeMapper;
 import cn.itcast.account.mapper.AccountMapper;
 import cn.itcast.account.service.AccountTCCService;
 import io.seata.core.context.RootContext;
@@ -22,11 +21,20 @@ public class AccountTCCServiceImpl implements AccountTCCService {
     @Autowired
     private AccountFreezeMapper freezeMapper;
 
+    // 为什么这里添加事务，下面没添加？个人认为是失误，手动添加上...
+
     @Override
     @Transactional
     public void deduct(String userId, int money) {
         // 0.获取事务id
         String xid = RootContext.getXID();
+        // 0.5 事务悬挂问题.
+        AccountFreeze oldFreeze = freezeMapper.selectById(xid);
+        if (oldFreeze != null) {
+            // cancel已经执行,不能再try.
+            return;
+        }
+
         // 1.扣减可用余额
         accountMapper.deduct(userId, money);
         // 2.记录冻结金额，事务状态
@@ -39,6 +47,7 @@ public class AccountTCCServiceImpl implements AccountTCCService {
     }
 
     @Override
+    @Transactional
     public boolean confirm(BusinessActionContext ctx) {
         // 1.获取事务id
         String xid = ctx.getXid();
@@ -48,10 +57,23 @@ public class AccountTCCServiceImpl implements AccountTCCService {
     }
 
     @Override
+    @Transactional
     public boolean cancel(BusinessActionContext ctx) {
         // 0.查询冻结记录
         String xid = ctx.getXid();
+        String UserId = ctx.getActionContext("userId").toString();
         AccountFreeze freeze = freezeMapper.selectById(xid);
+
+        // 0.5 由于某些原因根本没有try,没有记录:需要空回滚.
+        if (freeze == null) {
+            freeze = new AccountFreeze();
+            freeze.setUserId(UserId);
+            freeze.setFreezeMoney(0);
+            freeze.setState(AccountFreeze.State.CANCEL);
+            freeze.setXid(xid);
+            freezeMapper.insert(freeze);
+            return true;
+        }
 
         // 1.恢复可用余额
         accountMapper.refund(freeze.getUserId(), freeze.getFreezeMoney());
