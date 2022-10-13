@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:8.0.30
+    # image: mysql:5.7.25
+    environment:
+      MYSQL_ROOT_PASSWORD: abc123456
+    volumes:
+      - "/root/item-service/config/mysql/log/:/var/log/"
+      - "/root/item-service/config/mysql/data/:/var/lib/mysql/"
+      - "/root/item-service/config/mysql/conf/my.cnf:/etc/mysql/conf.d/my.cnf"
+    ports:
+      - "3306:3306"
+  canal-server:
+    image: canal/canal-server:v1.1.4
+    container_name: canal-server
+    ports: 
+      - 11111:11111
+    environment:
+      - canal.auto.scan=false
+      - canal.instance.master.address=91.199.209.120:3306
+      - canal.instance.dbUsername=canal
+      - canal.instance.dbPassword=canal
+      - canal.instance.filter.regex=.*\\..*
+      - canal.destinations=heima
+      - canal.instance.connectionCharset=UTF-8
+      - canal.instance.tsdb.enable=true
+    volumes:
+      - /root/item-service/test/log/:/home/admin/canal-server/logs/

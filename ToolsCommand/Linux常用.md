@@ -1092,3 +1092,11 @@ npm install --unsafe-perm node-sass
 java -java spring*.jav --spring.profiles.active=test
 java -java spring*.jav --server.port=88 --spring.profiles.active=test
 ```
+
+## 时间校准
+
+```bash
+tzselect
+
+sudo ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+```

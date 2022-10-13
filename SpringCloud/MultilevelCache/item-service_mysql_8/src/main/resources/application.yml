@@ -1,0 +1,38 @@
+server:
+  port: 8091
+spring:
+  application:
+    name: itemservice
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/heima?useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: 127.0.0.1
+    port: 8008
+    password: m2zT_cCmg~B2TYp-5_
+    pool:
+      max-active: 8
+      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-wait: -1
+      # 连接池中的最大空闲连接
+      max-idle: 32
+      # 连接池中的最小空闲连接
+      min-idle: 0
+mybatis-plus:
+  type-aliases-package: com.heima.item.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      update-strategy: not_null
+      id-type: auto
+logging:
+  level:
+    com.heima: debug
+  pattern:
+    dateformat: HH:mm:ss:SSS
+canal:
+  destination: heima
+  server: 127.0.0.1:11111
