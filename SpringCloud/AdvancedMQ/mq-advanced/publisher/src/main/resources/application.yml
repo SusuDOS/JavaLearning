@@ -10,7 +10,7 @@ spring:
     username: itcast
     password: 123321
     virtual-host: /
-#    publisher-confirm-type: correlated
-#    publisher-returns: true
+#    publisher-confirm-type: correlated # 异步回调机制
+#    publisher-returns: true # 不会直接丢弃
 #    template:
-#      mandatory: true
+#      mandatory: true # 消息回执,false则直接丢弃

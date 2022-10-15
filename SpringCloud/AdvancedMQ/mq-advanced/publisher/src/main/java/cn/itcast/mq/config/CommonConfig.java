@@ -11,6 +11,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class CommonConfig implements ApplicationContextAware {
 
+    // ApplicationContextAware是spring容器的通知接口.
+
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         // 获取RabbitTemplate对象
@@ -25,7 +27,7 @@ public class CommonConfig implements ApplicationContextAware {
             }
             // 记录日志
             log.error("消息发送到队列失败，响应码：{}, 失败原因：{}, 交换机: {}, 路由key：{}, 消息: {}",
-                     replyCode, replyText, exchange, routingKey, message.toString());
+                    replyCode, replyText, exchange, routingKey, message.toString());
             // 如果有需要的话，重发消息
         });
     }

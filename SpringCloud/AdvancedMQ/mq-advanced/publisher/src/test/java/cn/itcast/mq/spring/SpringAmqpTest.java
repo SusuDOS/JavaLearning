@@ -1,6 +1,8 @@
 package cn.itcast.mq.spring;
 
-import lombok.extern.slf4j.Slf4j;
+import java.nio.charset.StandardCharsets;
+import java.util.UUID;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.amqp.core.Message;
@@ -12,8 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.nio.charset.StandardCharsets;
-import java.util.UUID;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RunWith(SpringRunner.class)
@@ -49,7 +50,7 @@ public class SpringAmqpTest {
         rabbitTemplate.convertAndSend("amq.topic", "a.simple.test", message, correlationData);
     }
 
-    // 消息持久化是默认开启的，下面演示是为了使用消息非持久化
+    // 消息持久化是默认开启的，下面演示是为了使用消息非持久化.
     @Test
     public void testDurableMessage() {
         // 1.准备消息
@@ -60,9 +61,14 @@ public class SpringAmqpTest {
         rabbitTemplate.convertAndSend("simple.queue", message);
     }
 
+    // 消息发送到ttl，ttl消息过期 就会自动发给 死信交换机 -> 死信队列
     @Test
     public void testTTLMessage() {
         // 1.准备消息
+
+        // 设置消息的时间,实际有效时间为队列和消息时间的较小值.
+        
+        // 我以为只能设置10s内，尝试设置50s，测试没有任何问题.
         Message message = MessageBuilder
                 .withBody("hello, ttl messsage".getBytes(StandardCharsets.UTF_8))
                 .setDeliveryMode(MessageDeliveryMode.PERSISTENT)
@@ -74,6 +80,7 @@ public class SpringAmqpTest {
         log.info("消息已经成功发送！");
     }
 
+    // 先延迟交换机发送消息，实现延迟消息功能.
     @Test
     public void testSendDelayMessage() throws InterruptedException {
         // 1.准备消息
@@ -90,10 +97,12 @@ public class SpringAmqpTest {
         log.info("发送消息成功");
     }
 
+    // 以下两个test演示惰性队列与普通队列区别。
+
     @Test
     public void testLazyQueue() throws InterruptedException {
         long b = System.nanoTime();
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < 2000000; i++) {
             // 1.准备消息
             Message message = MessageBuilder
                     .withBody("hello, Spring".getBytes(StandardCharsets.UTF_8))
@@ -109,7 +118,7 @@ public class SpringAmqpTest {
     @Test
     public void testNormalQueue() throws InterruptedException {
         long b = System.nanoTime();
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < 2000000; i++) {
             // 1.准备消息
             Message message = MessageBuilder
                     .withBody("hello, Spring".getBytes(StandardCharsets.UTF_8))

@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+  canalServer:
+    container_name: canalServer
+    image: canal/canal-server:v1.1.6
+    environment:
+      canal.destinations: heima
+      canal.instance.master.address: mysql:3306
+      canal.instance.dbUsername: canal
+      canal.instance.dbPassword: canal
+      canal.instance.connectionCharset: UTF-8
+      canal.instance.tsdb.enable: true
+      canal.instance.gtidon: false
+      canal.instance.filter.regex: heima\\..* \
+    ports:
+      - "11111:11111"

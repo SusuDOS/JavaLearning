@@ -1100,3 +1100,66 @@ tzselect
 
 sudo ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ```
+
+## Redis-cli
+
+在linux上只安装`redis-cli`,只能直接用源代码编译，ubuntu18.04不缺gcc等编译工具和对应的库执行执行即可，centos7.9没有编译的相关组件，需要先安装.
+
+在ubuntu18.04上只安装 `redis-cli` .
+
+```bash
+
+# 对应编译工具
+yum -y install gcc gcc-c++ libstdc++-devel
+
+cd /tmp
+wget http://download.redis.io/redis-stable.tar.gz
+tar xvzf redis-stable.tar.gz
+cd redis-stable
+make
+cp src/redis-cli /usr/local/bin/
+chmod 755 /usr/local/bin/redis-cli
+```
+
+## swap分区
+
+实际上，并不是等所有的物理内存都消耗完毕之后，才去使用swap的空间，什么时候使用是由 `swappiness` 参数值控制。
+
+cat /proc/sys/vm/swappiness
+
+该值在centos 7上默认值是30，在Centos 6上是60，可以看出新版本的linux已经在根据内存大小趋势做出一定的调整。
+
+`swappiness=0` 的时候表示最大限度使用物理内存，然后才是 `swap` 空间，
+
+`swappiness＝100` 的时候表示积极的使用 `swap` 分区，并且把内存上的数据及时的搬运到swap空间里面。
+
+现在服务器的内存动不动就是上百G，所以我们可以把这个参数值设置的低一些，让操作系统尽可能的使用物理内存，降低系统对swap的使用，从而提高系统的性能。特别是对于性能要求较高的数据库服务器，要求全部使用内存。
+
+- 临时修改
+
+```
+sysctl vm.swappiness=10
+cat /proc/sys/vm/swappiness
+```
+
+- 永久修改：
+
+在/etc/sysctl.conf 文件里添加如下参数：
+
+```bash
+vm.swappiness=10
+
+# 使其生效
+sysctl -p
+
+# 查看
+cat /proc/sys/vm/swappiness
+```
+
+## SSHD
+
+```bash
+sshd:192.168.0.158:allow    #允许IP地址为192.168.0.158的主机使用ssh连接
+sshd:192.168.0.*:allow      #允许IP地址段为：192.168.0.0/24的主机使用ssh连接
+sshd:all:deny               #拒绝除允许地址之外的所有主机使用ssh连接
+```

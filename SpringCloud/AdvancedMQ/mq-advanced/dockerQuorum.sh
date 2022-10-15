@@ -1,4 +1,4 @@
-docker network delete mq-net
+# docker network delete mq-net
 
 docker network create mq-net
 

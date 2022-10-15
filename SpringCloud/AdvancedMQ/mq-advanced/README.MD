@@ -1,12 +1,36 @@
 # RabbitMQ高级
 
+## 发送者消息确认机制
+
+- 发送者需要确认正确投递到交换机,和队列.
+
+## 消费者消息确认机制
+
+- 1. 消费者必须正确消费消息才算完成
+
+- 2.1 消费者直接打回给rabbit，会导致无限重试。
+
+- 2.2 消费者本地重试确实无法消费默认会拒绝导致消息丢失。
+
+- 2.3 设置本次尝试失败后由消费者将消息投递到指定交换机(error.direct)->队列(error.queue)
+
+```bash
+none：rabbit会在消费者取了消息之后就删除消息；
+auto：若消费者不设置重试则消费端直接将消息打回rabbit，若设置尝试次数，耗尽次数，消费端和rabbit中都不会存在消息.
+
+本java文件就是实现:
+指定消息处理:由消费端将无法处理的异常消息投递到交换机("error.direct")->队列("error.queue");
+```
+
+- 死信交换机
+
 ## 启动RabbitMQ
 
 ```bash
 # 启动RabbitMQ的docker容器.
 bash dockerStart.sh
 
-# 进入容器启用插件.
+# 进入容器启用插件:死信交换机
 docker exec -it rabbit bash
 rabbitmq-plugins enable rabbitmq_delayed_message_exchange
 
@@ -48,6 +72,8 @@ cluster_formation.classic_config.nodes.3 = rabbit@host3
 echo "FXZMCVGLBIXZCDEMMVZQ" > .erlang.cookie
 # 修改cookie文件的权限
 ```
+
+<font color=red size=4>特别提醒该文件必须创建，复制过来的文件是无法使用。貌似三个配置完全一致直接使用rabbitmq1的即可正常使用.</font>
 
 - 启动集群
 
