@@ -17,7 +17,7 @@ spring:
     listener:
       simple:
         prefetch: 1
-        acknowledge-mode: auto # none在消费端未正常处理会丢失；auto自动
+        acknowledge-mode: auto # none在消费端未正常处理会丢失；auto自动进入消费者通道，客户端挂掉，仍然会丢失通道内的消息，需要manual处理.
         retry:
           enabled: true
           initial-interval: 1000 # 单位ms
