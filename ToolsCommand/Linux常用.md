@@ -1163,3 +1163,23 @@ sshd:192.168.0.158:allow    #允许IP地址为192.168.0.158的主机使用ssh连
 sshd:192.168.0.*:allow      #允许IP地址段为：192.168.0.0/24的主机使用ssh连接
 sshd:all:deny               #拒绝除允许地址之外的所有主机使用ssh连接
 ```
+
+## 挂载内存到文件夹+测速
+
+![参考:https://blog.51cto.com/moerjinrong/2286323](https://blog.51cto.com/moerjinrong/2286323)
+
+```bash
+# 指定为4G
+mount tmpfs /tmp -t tmpfs -o size=4096m
+
+# 默认是2G
+mount tmpfs /tmp -t tmpfs
+
+# 测试磁盘写能力
+因为/dev/zero是一个伪设备，它只产生空字符流，对它不会产生IO，所以，IO都会集中在of文件中，of文件只用于写，所以这个命令相当于测试磁盘的写能力。命令结尾添加oflag=direct将跳过内存缓存，添加oflag=sync将跳过hdd缓存。
+time dd if=/dev/zero of=/tmp/Test.block bs=4k count=1024*1024
+
+# 测试磁盘的读能力
+因为/dev/sdb是一个物理分区，对它的读取会产生IO，/dev/null是伪设备，相当于黑洞，of到该设备不会产生IO，所以，这个命令的IO只发生在/dev/sdb上，也相当于测试磁盘的读能力。/tmp/Test.block是刚刚生成的文件....
+time dd if=/tmp/Test.block of=/dev/null bs=4M
+```
