@@ -1166,7 +1166,7 @@ sshd:all:deny               #拒绝除允许地址之外的所有主机使用ssh
 
 ## 挂载内存到文件夹+测速
 
-![参考:https://blog.51cto.com/moerjinrong/2286323](https://blog.51cto.com/moerjinrong/2286323)
+[参考:https://blog.51cto.com/moerjinrong/2286323](https://blog.51cto.com/moerjinrong/2286323)
 
 ```bash
 # 指定为4G
